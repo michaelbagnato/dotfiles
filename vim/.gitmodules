@@ -1,0 +1,9 @@
+[submodule "/home/michael/.vim/pack/colours/start/dracula"]
+	path = /home/michael/.vim/pack/colours/start/dracula
+	url = https://github.com/dracula/vim
+[submodule "/home/michael/.vim/pack/syntax/start/omnisharp"]
+	path = /home/michael/.vim/pack/syntax/start/omnisharp
+	url = https://github.com/OmniSharp/Omnisharp-vim
+[submodule "/home/michael/.vim/pack/plugins/start/nerdtree"]
+	path = /home/michael/.vim/pack/plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree
