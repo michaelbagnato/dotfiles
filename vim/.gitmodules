@@ -10,3 +10,6 @@
 [submodule "/home/michael/.vim/pack/plugins/start/airline"]
 	path = /home/michael/.vim/pack/plugins/start/airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "home/michael/.vim/pack/colours/start/airline-themes"]
+	path = /home/michael/.vim/pack/colours/start/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
