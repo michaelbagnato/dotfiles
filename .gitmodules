@@ -10,3 +10,6 @@
 [submodule "vim/pack/syntax/start/ale"]
 	path = vim/pack/syntax/start/ale
 	url = https://github.com/dense-analysis/ale
+[submodule "vim/pack/plugins/start/lightline"]
+	path = vim/pack/plugins/start/lightline
+	url = https://github.com/itchyny/lightline.vim
