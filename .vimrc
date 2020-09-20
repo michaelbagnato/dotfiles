@@ -18,6 +18,10 @@ set smarttab
 autocmd VimEnter * NERDTree
 
 
+
+" Lightline setup
+" ==============================================================================
+let g:lightline = { 'colorscheme': 'molokai', }
 " Miscellaneous
 " ==============================================================================
 
