@@ -7,6 +7,3 @@
 [submodule "vim/pack/syntax/start/omnisharp"]
 	path = vim/pack/syntax/start/omnisharp
 	url = https://github.com/OmniSharp/Omnisharp-vim
-[submodule "vim/pack/syntax/start/vim/pack/syntax/start/ale"]
-	path = vim/pack/syntax/start/vim/pack/syntax/start/ale
-	url = https://github.com/dense-analysis/ale
