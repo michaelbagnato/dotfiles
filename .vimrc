@@ -13,6 +13,15 @@ set smarttab
 
 
 
+" OmniSharp settings
+" ==============================================================================
+
+" Keybindings
+augroup omnisharp_commands
+	autocmd FileType cs nmap <silent> <buffer> <C-r>a :OmniSharpRunTestsInFile<CR>
+augroup END
+
+
 " NerdTREE setup
 " ==============================================================================
 autocmd VimEnter * NERDTree
@@ -21,7 +30,8 @@ autocmd VimEnter * NERDTree
 
 " Lightline setup
 " ==============================================================================
-let g:lightline = { 'colorscheme': 'molokai', }
+let g:lightline = { 'colorscheme': 'Tomorrow_Night_Blue' }
+
 " Miscellaneous
 " ==============================================================================
 
