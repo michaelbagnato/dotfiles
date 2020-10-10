@@ -14,7 +14,6 @@ set smarttab
 " Generic keybindings
 nmap <silent> <buffer> <C-e> :NERDTree<CR>
 
-
 " OmniSharp settings
 " ==============================================================================
 
@@ -25,6 +24,7 @@ augroup END
 
 " Lightline setup
 " ==============================================================================
+
 let g:lightline = { 'colorscheme': 'Tomorrow_Night_Blue' }
 
 " Miscellaneous
@@ -41,3 +41,8 @@ syntax enable
 colors dracula
 
 filetype indent plugin on
+
+" Always display the status line.
+" I have no idea why this is necessary, only that it's the only way I can get
+" NERDTree to play nice with Lightline
+set laststatus=2
