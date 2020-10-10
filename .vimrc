@@ -11,6 +11,8 @@ set shiftwidth=3
 " Smart tabs
 set smarttab
 
+" Generic keybindings
+nmap <silent> <buffer> <C-e> :NERDTree<CR>
 
 
 " OmniSharp settings
@@ -20,13 +22,6 @@ set smarttab
 augroup omnisharp_commands
 	autocmd FileType cs nmap <silent> <buffer> <C-r>a :OmniSharpRunTestsInFile<CR>
 augroup END
-
-
-" NerdTREE setup
-" ==============================================================================
-autocmd VimEnter * NERDTree
-
-
 
 " Lightline setup
 " ==============================================================================
