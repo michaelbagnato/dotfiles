@@ -11,8 +11,11 @@ set shiftwidth=3
 " Smart tabs
 set smarttab
 
+
+" NERDTree Settings
+
 " Generic keybindings
-nmap <silent> <buffer> <C-e> :NERDTree<CR>
+nmap <silent> <buffer> <C-e> :NERDTreeToggle<CR>
 
 " OmniSharp settings
 " ==============================================================================
