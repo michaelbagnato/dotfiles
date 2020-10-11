@@ -2,6 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+get_git_branch()
+{
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -41,7 +46,7 @@ case "$TERM" in
 esac
 
 # MB adjustment of PS1 variable to only show the current directory name
-PS1='\[\033[01;32m\]\w\[\033[00m\]\$ '
+PS1='\[\033[01;32m\]\w \033[01;38;5;214m\]$(get_git_branch)\033[00;37m\]$ '
 
 unset color_prompt force_color_prompt
 
