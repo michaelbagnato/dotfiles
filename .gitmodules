@@ -1,15 +1,15 @@
-[submodule "vim/pack/colours/start/dracula"]
+[submodule "dracula"]
 	path = vim/pack/colours/start/dracula
 	url = https://github.com/dracula/vim
-[submodule "vim/pack/syntax/start/nerdtree"]
+[submodule "nerdtree"]
 	path = vim/pack/syntax/start/nerdtree
 	url = https://github.com/preservim/nerdtree
-[submodule "vim/pack/syntax/start/omnisharp"]
+[submodule "omnisharp"]
 	path = vim/pack/syntax/start/omnisharp
 	url = https://github.com/OmniSharp/Omnisharp-vim
-[submodule "vim/pack/syntax/start/ale"]
+[submodule "ale"]
 	path = vim/pack/syntax/start/ale
 	url = https://github.com/dense-analysis/ale
-[submodule "vim/pack/plugins/start/lightline"]
+[submodule "lightline"]
 	path = vim/pack/plugins/start/lightline
 	url = https://github.com/itchyny/lightline.vim
