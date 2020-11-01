@@ -46,7 +46,7 @@ case "$TERM" in
 esac
 
 # MB adjustment of PS1 variable to only show the current directory name
-PS1='\[\033[01;32m\]\w \033[00m\]$ '
+PS1='\[\033[01;31m\]\w \033[00m\]$ '
 
 unset color_prompt force_color_prompt
 
