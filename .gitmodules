@@ -13,6 +13,3 @@
 [submodule "lightline"]
 	path = vim/pack/plugins/start/lightline
 	url = https://github.com/itchyny/lightline.vim
-[submodule "themes/sweet"]
-	path = themes/sweet
-	url = git@github.com:EliverLara/Sweet.git
