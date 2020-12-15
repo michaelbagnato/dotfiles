@@ -4,9 +4,6 @@
 [submodule "nerdtree"]
 	path = vim/pack/syntax/start/nerdtree
 	url = https://github.com/preservim/nerdtree
-[submodule "omnisharp"]
-	path = vim/pack/syntax/start/omnisharp
-	url = https://github.com/OmniSharp/Omnisharp-vim
 [submodule "lightline"]
 	path = vim/pack/plugins/start/lightline
 	url = https://github.com/itchyny/lightline.vim
