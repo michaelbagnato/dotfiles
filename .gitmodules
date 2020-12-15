@@ -7,9 +7,6 @@
 [submodule "omnisharp"]
 	path = vim/pack/syntax/start/omnisharp
 	url = https://github.com/OmniSharp/Omnisharp-vim
-[submodule "ale"]
-	path = vim/pack/syntax/start/ale
-	url = https://github.com/dense-analysis/ale
 [submodule "lightline"]
 	path = vim/pack/plugins/start/lightline
 	url = https://github.com/itchyny/lightline.vim
