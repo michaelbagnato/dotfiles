@@ -11,8 +11,9 @@ set shiftwidth=3
 " Smart tabs
 set smarttab
 
-
-" NERDTree Settings
+" Disabling viminfo
+let skip_defaults_vim=1
+set viminfo=""
 
 " Generic keybindings
 nmap <silent> <buffer> <C-e> :NERDTreeToggle<CR>
