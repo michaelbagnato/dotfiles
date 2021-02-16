@@ -17,6 +17,7 @@ set viminfo=""
 
 " Generic keybindings
 nmap <silent> <buffer> <C-e> :NERDTreeToggle<CR>
+nmap <silent> <buffer> <C-S-m> :LspDocumentDiagnostics<CR>
 
 " OmniSharp settings
 " ==============================================================================
