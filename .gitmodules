@@ -19,3 +19,6 @@
 [submodule "asyncomplete-lsp.vim"]
 	path = vim/pack/syntax/start/asyncomplete-lsp.vim
 	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim
+[submodule "vim/pack/colours/start/vim-synthwave84"]
+	path = vim/pack/colours/start/vim-synthwave84
+	url = https://github.com/artanikin/vim-synthwave84
