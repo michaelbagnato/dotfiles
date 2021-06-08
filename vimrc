@@ -43,7 +43,7 @@ silent! helptags ALL
 
 " Theme setup
 syntax enable
-colorscheme synthwave84
+colorscheme dracula
 
 filetype indent plugin on
 
