@@ -30,7 +30,7 @@ augroup END
 " Lightline setup
 " ==============================================================================
 
-let g:lightline = { 'colorscheme': 'Tomorrow_Night_Blue' }
+let g:lightline = { 'colorscheme': 'one' }
 
 " Miscellaneous
 " ==============================================================================
