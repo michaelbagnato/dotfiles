@@ -1,0 +1,16 @@
+env:
+  WINIT_X11_SCALE_FACTOR: '1.0'
+
+window:
+  dimensions:
+    columns: 90
+    lines: 24
+
+font:
+  normal:
+    family: JetBrains Mono NL
+    style: Regular
+  
+  size: 13.0
+
+background_opacity: 0.9
