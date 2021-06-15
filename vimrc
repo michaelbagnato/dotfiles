@@ -16,8 +16,8 @@ let skip_defaults_vim=1
 set viminfo=""
 
 " Generic keybindings
-nmap <silent> <buffer> <C-e> :NERDTreeToggle<CR>
-nmap <silent> <buffer> <C-S-m> :LspDocumentDiagnostics<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <C-S-m> :LspDocumentDiagnostics<CR>
 
 " OmniSharp settings
 " ==============================================================================
