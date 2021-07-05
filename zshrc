@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_ORDER=(jobs battery dir git node docker dotnet)
+SPACESHIP_PROMPT_ORDER=(jobs battery dir git node dotnet)
 SPACESHIP_DIR_PREFIX=''
 SPACESHIP_RPROMPT_ORDER=(time)
 SPACESHIP_TIME_SHOW=true
