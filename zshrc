@@ -86,7 +86,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export EDITOR=vim
+export EDITOR=nvim
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
