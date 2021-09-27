@@ -12,12 +12,14 @@ set shiftwidth=3
 set smarttab
 
 set viminfo=""
+map <C-E> :NERDTreeToggle<CR>
 
 " Plugins (using vim-plug)
 " ==============================================================================
 call plug#begin('~/.vim/plugged')
 " Dracula theme
 Plug 'dracula/vim',{'as':'dracula'}
+Plug 'preservim/nerdtree'
 call plug#end()
 
 colorscheme dracula
