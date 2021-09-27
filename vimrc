@@ -11,6 +11,8 @@ set shiftwidth=3
 " Smart tabs
 set smarttab
 
+set viminfo=""
+
 " Plugins (using vim-plug)
 " ==============================================================================
 call plug#begin('~/.vim/plugged')
