@@ -20,7 +20,11 @@ call plug#begin('~/.vim/plugged')
 " Dracula theme
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'preservim/nerdtree'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 colorscheme dracula
 
+lua << EOF
+require'lspconfig'.tsserver.setup{}
+EOF
