@@ -11,6 +11,7 @@ set shiftwidth=3
 " Smart tabs
 set smarttab
 
+set viminfo=""
 map <C-E> :NERDTreeToggle<CR>
 
 " Plugins (using vim-plug)
