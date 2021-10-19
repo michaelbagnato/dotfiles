@@ -21,10 +21,22 @@ call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'preservim/nerdtree'
 Plug 'neovim/nvim-lspconfig'
+Plug 'alexaandru/nvim-lspupdate'
 call plug#end()
 
 colorscheme dracula
 
 lua << EOF
-require'lspconfig'.tsserver.setup{}
+local on_attach = function(client, bufnr)
+end
+
+
+local lspServers = {'tsserver', 'intelephense'}
+local nvim_lsp = require('lspconfig')
+
+for _, lsp in ipairs(lspServers) do
+	nvim_lsp[lsp].setup {
+		on_attach = on_attach
+	}
+end
 EOF
