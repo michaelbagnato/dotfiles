@@ -31,7 +31,7 @@ local on_attach = function(client, bufnr)
 end
 
 
-local lspServers = {'tsserver', 'intelephense'}
+local lspServers = {'tsserver'}
 local nvim_lsp = require('lspconfig')
 
 for _, lsp in ipairs(lspServers) do
