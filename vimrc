@@ -18,11 +18,11 @@ map <C-E> :NERDTreeToggle<CR>
 " ==============================================================================
 call plug#begin('~/.vim/plugged')
 
-Plug 'dracula/vim',{'as':'dracula'}
-Plug 'preservim/nerdtree'
-Plug 'neovim/nvim-lspconfig'
-Plug 'alexaandru/nvim-lspupdate'
-Plug 'ms-jpq/coq_nvim',{'branch':'coq'}
+Plug 'dracula/vim',{'as':'dracula'} "Dracula colourscheme
+Plug 'preservim/nerdtree' "File explorer
+Plug 'neovim/nvim-lspconfig' "Configurations for LSPs
+Plug 'alexaandru/nvim-lspupdate' 
+Plug 'ms-jpq/coq_nvim',{'branch':'coq'} "Autocompletion
 call plug#end()
 
 colorscheme dracula
