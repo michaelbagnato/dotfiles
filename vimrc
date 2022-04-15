@@ -12,7 +12,8 @@ set shiftwidth=3
 set smarttab
 
 set viminfo=""
-map <C-E> :NERDTreeToggle<CR>
+noremap <C-E> :NERDTreeToggle<CR>
+noremap gc :Git commit<CR>
 
 " Terminal GUI colours
 set termguicolors
@@ -43,7 +44,6 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme synthwave84
-
 
 " Setup LSP
 " ==============================================================================
