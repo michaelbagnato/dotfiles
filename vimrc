@@ -14,18 +14,32 @@ set smarttab
 set viminfo=""
 map <C-E> :NERDTreeToggle<CR>
 
+" Terminal GUI colours
+set termguicolors
+
 " Plugins (using vim-plug)
 " ==============================================================================
 call plug#begin('~/.vim/plugged')
+" Dracula - Colourscheme
+Plug 'dracula/vim',{'as':'dracula'} 
 
-Plug 'dracula/vim',{'as':'dracula'} "Dracula colourscheme
-Plug 'preservim/nerdtree' "File explorer
-Plug 'neovim/nvim-lspconfig' "Configurations for LSPs
+" NERDTree - File explorer
+Plug 'preservim/nerdtree' 
+
+" LSP Config - Configurations for LSPs
+Plug 'neovim/nvim-lspconfig' 
+
 Plug 'alexaandru/nvim-lspupdate' 
-Plug 'ms-jpq/coq_nvim',{'branch':'coq'} "Autocompletion
+
+" Coq - Autocompletion
+Plug 'ms-jpq/coq_nvim',{'branch':'coq'} 
+
+" Synthwave84 - Colourscheme
+Plug 'artanikin/vim-synthwave84'
+
 call plug#end()
 
-colorscheme dracula
+colorscheme synthwave84
 
 
 " Setup LSP
@@ -41,7 +55,6 @@ local coq = require('coq')
 
 for _, lsp in ipairs(lspServers) do
 	nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
-	--	nvim_lsp[lsp].setup {
 		on_attach = on_attach
 	}))
 end
