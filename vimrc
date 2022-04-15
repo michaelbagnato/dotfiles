@@ -37,6 +37,9 @@ Plug 'ms-jpq/coq_nvim',{'branch':'coq'}
 " Synthwave84 - Colourscheme
 Plug 'artanikin/vim-synthwave84'
 
+" Fugitive - Git support for Vim
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 colorscheme synthwave84
