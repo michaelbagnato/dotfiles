@@ -1,3 +1,14 @@
+# TODO Check if nordsock is enabled before asking to turn on the VPN
+vpn_status=$(nordvpn status | wc -l)
+if [ $vpn_status = "1" ]; then
+	#echo "Would you like to turn on the VPN?"
+	read vpn_answer\?'Would you like to turn on the VPN (Y/n)? '
+	vpn_answer=${vpn_answer:-y}
+	if [ $vpn_answer = "y" ]; then
+		nordvpn c
+	fi;
+fi;
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -117,3 +128,4 @@ export EDITOR=nvim
 if [ -f ./.zshenv ]; then
 	source ./.zshenv
 fi
+
