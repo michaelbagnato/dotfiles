@@ -20,7 +20,7 @@ source ~/.vimConfig/plugins.vimrc
 source ~/.vimConfig/lsp.vimrc
 source ~/.vimConfig/keymappings.vimrc
 
-colorscheme synthwave84
+colorscheme dracula 
 
 " Enable autocompletion
 COQnow
