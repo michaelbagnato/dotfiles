@@ -19,4 +19,8 @@ Plug 'artanikin/vim-synthwave84'
 " Fugitive - Git support for Vim
 Plug 'tpope/vim-fugitive'
 
+" Vim DevIcons - file type icons for NERDTree
+" (Must be installed as the last plugin)
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
