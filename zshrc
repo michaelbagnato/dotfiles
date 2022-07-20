@@ -4,7 +4,7 @@ if [ $vpn_status = "1" ]; then
 	#echo "Would you like to turn on the VPN?"
 	read vpn_answer\?'Would you like to turn on the VPN (Y/n)? '
 	vpn_answer=${vpn_answer:-y}
-	if [ $vpn_answer = "y" ]; then
+	if [[ $vpn_answer = "y" || $vpn_answer = "Y" ]]; then
 		nordvpn c
 	fi;
 fi;
