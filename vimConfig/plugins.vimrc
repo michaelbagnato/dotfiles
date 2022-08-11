@@ -1,6 +1,10 @@
 call plug#begin('~/.vim/plugged')
-" Dracula - Colourscheme
-Plug 'dracula/vim',{'as':'dracula'} 
+
+" Dracula colour scheme
+Plug 'Mofiqul/dracula.nvim'
+
+" Lualine.nvim - Status line config
+Plug 'nvim-lualine/lualine.nvim'
 
 " NERDTree - File explorer
 Plug 'preservim/nerdtree' 
@@ -14,10 +18,11 @@ Plug 'alexaandru/nvim-lspupdate'
 Plug 'ms-jpq/coq_nvim',{'branch':'coq'} 
 
 " Fugitive - Git support for Vim
+" TODO Look for Nvim replacement
 Plug 'tpope/vim-fugitive'
 
-" Airline - status bar config
-Plug 'vim-airline/vim-airline'
+" Treesitter - Highlighting improvements
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Vim DevIcons - file type icons for NERDTree
 " (Must be installed as the last plugin)

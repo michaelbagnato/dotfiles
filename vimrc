@@ -19,9 +19,8 @@ set termguicolors
 source ~/.vimConfig/plugins.vimrc
 source ~/.vimConfig/lsp.vimrc
 source ~/.vimConfig/keymappings.vimrc
-
-let g:airline_powerline_fonts = 1
-
+source ~/.vimConfig/lualine.vimrc
+source ~/.vimConfig/treesitter.vimrc
 colorscheme dracula 
 
 " Enable autocompletion
