@@ -12,4 +12,12 @@ for _, lsp in ipairs(lspServers) do
 		on_attach = on_attach
 	}))
 end
+
+-- Diagnostic window
+vim.diagnostic.config({
+	virtual_text = false
+})
+
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, border='double'})]]
 EOF
