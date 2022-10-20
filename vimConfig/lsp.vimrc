@@ -3,7 +3,7 @@ local on_attach = function(client, bufnr)
 end
 
 
-local lspServers = {'tsserver', 'angularls'}
+local lspServers = {'tsserver', 'angularls', 'sumneko_lua'}
 local nvim_lsp = require('lspconfig')
 local coq = require('coq')
 

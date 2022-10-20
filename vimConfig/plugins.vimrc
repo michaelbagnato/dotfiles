@@ -1,3 +1,4 @@
+vim.cmd([[
 call plug#begin('~/.vim/plugged')
 
 " Dracula colour scheme
@@ -29,3 +30,4 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
+]])
