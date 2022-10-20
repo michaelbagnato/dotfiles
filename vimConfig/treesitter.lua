@@ -1,5 +1,4 @@
-lua<<EOF
-require'nvim-treesitter.configs'.setup {
+return require('nvim-treesitter.configs').setup {
 	ensure_installed = { "typescript", "vim" },
 	sync_install = true,
 	auto_install = true,
@@ -7,4 +6,3 @@ require'nvim-treesitter.configs'.setup {
 		enable = true
 	},
 }
-EOF

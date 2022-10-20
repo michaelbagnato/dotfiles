@@ -1,4 +1,9 @@
+package.path = package.path .. ";/home/michael/vimConfig/?.lua"
+require('plugins')
+require('treesitter')
+
 vim.cmd([[
+colorscheme dracula 
 " Basic vim settings
 " ==============================================================================
 
@@ -17,12 +22,9 @@ set viminfo=""
 " Terminal GUI colours
 set termguicolors
 
-source ~/.vimConfig/plugins.vimrc
-source ~/.vimConfig/lsp.vimrc
-source ~/.vimConfig/keymappings.vimrc
-source ~/.vimConfig/lualine.vimrc
-source ~/.vimConfig/treesitter.vimrc
-colorscheme dracula 
+source ~/vimConfig/lsp.vimrc
+source ~/vimConfig/keymappings.vimrc
+source ~/vimConfig/lualine.vimrc
 
 " Enable autocompletion
 COQnow
