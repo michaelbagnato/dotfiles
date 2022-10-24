@@ -1,8 +1,8 @@
 package.path = package.path .. ";/home/michael/vimConfig/?.lua"
 require('plugins')
+require('statusline')
 require('treesitter')
 require('lsp')
-require('lualine')
 vim.o.number = true
 
 -- Three space tabs
@@ -16,7 +16,6 @@ vim.o.viminfo = false
 
 -- Terminal GUI colours
 vim.o.termguicolors = true
-
 
 vim.cmd('colorscheme dracula')
 
