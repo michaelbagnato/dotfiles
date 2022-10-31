@@ -12,7 +12,7 @@ use 'preservim/nerdtree'
 
 -- LSP Config - Configurations for LSPs
 use 'neovim/nvim-lspconfig'
-use 'alexaandru/nvim-lspupdate'
+use 'williamboman/nvim-lsp-installer'
 
 -- Coq - Autocompletion
 use {'ms-jpq/coq_nvim', branch = 'coq'}

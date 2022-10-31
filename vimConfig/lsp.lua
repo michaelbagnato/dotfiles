@@ -1,10 +1,11 @@
 local on_attach = function(client, bufnr)
 end
 
-local lspServers = {'tsserver', 'angularls', 'sumneko_lua'}
+local lspServers = {'tsserver', 'angularls', 'sumneko_lua', 'gopls'}
 local nvim_lsp = require('lspconfig')
 local coq = require('coq')
 
+require("nvim-lsp-installer").setup{}
 for _, lsp in ipairs(lspServers) do
 	if(lsp == "sumneko_lua")
 	then
