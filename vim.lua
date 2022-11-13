@@ -3,6 +3,7 @@ require('plugins')
 require('statusline')
 require('treesitter')
 require('lsp')
+require('keymappings')
 vim.o.number = true
 
 -- Three space tabs
@@ -20,8 +21,6 @@ vim.o.termguicolors = true
 vim.cmd('colorscheme dracula')
 
 vim.cmd([[
-source ~/vimConfig/keymappings.vimrc
-
 " Enable autocompletion
 COQnow
 ]])
