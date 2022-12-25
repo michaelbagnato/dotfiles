@@ -1,4 +1,4 @@
-package.path = package.path .. ";/home/michael/vimConfig/?.lua"
+package.path = package.path .. ";/home/michaelb/vimConfig/?.lua"
 require('plugins')
 require('statusline')
 require('treesitter')
