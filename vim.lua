@@ -18,7 +18,7 @@ vim.o.viminfo = false
 -- Terminal GUI colours
 vim.o.termguicolors = true
 
-vim.cmd('colorscheme dracula')
+vim.cmd('colorscheme cyberpunk-neon')
 
 vim.cmd([[
 " Enable autocompletion
