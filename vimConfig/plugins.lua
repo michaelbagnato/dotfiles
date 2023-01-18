@@ -1,8 +1,8 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 
--- Dracula colour scheme
-use 'Mofiqul/dracula.nvim'
+-- FluoroMachine colour scheme
+use 'maxmx03/FluoroMachine.nvim'
 
 -- Lualine.nvim - Status line config
 use 'nvim-lualine/lualine.nvim'

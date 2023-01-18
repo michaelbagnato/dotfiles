@@ -18,7 +18,9 @@ vim.o.viminfo = false
 -- Terminal GUI colours
 vim.o.termguicolors = true
 
-vim.cmd('colorscheme cyberpunk-neon')
+local fluromachine = require 'fluoromachine'
+fluromachine.setup {transparent = true}
+vim.cmd 'colorscheme fluoromachine'
 
 vim.cmd([[
 " Enable autocompletion
