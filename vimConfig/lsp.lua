@@ -1,29 +1,15 @@
 local on_attach = function(client, bufnr)
 end
 
-local lspServers = {'tsserver', 'sumneko_lua', 'gopls'}
+local lspServers = {'tsserver', 'gopls'}
 local nvim_lsp = require('lspconfig')
 local coq = require('coq')
 
 require("nvim-lsp-installer").setup{}
 for _, lsp in ipairs(lspServers) do
-	if(lsp == "sumneko_lua")
-	then
-		nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
-			on_attach = on_attach,
-			settings = {
-   			Lua = {
-			      diagnostics = {
-			        globals = {'vim'},
-      			}
-    			}
-  			}
-		}))
-	else
-		nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
-			on_attach = on_attach
-		}))
-	end
+	nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
+		on_attach = on_attach
+	}))
 end
 
 -- Diagnostic window
