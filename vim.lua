@@ -18,9 +18,18 @@ vim.o.viminfo = false
 -- Terminal GUI colours
 vim.o.termguicolors = true
 
-local fluromachine = require 'fluoromachine'
-fluromachine.setup {transparent = true}
+local success, fluoromachine = pcall(require, 'fluoromachine')
+fluoromachine:setup {
+	config = {
+		glow = true,
+		transparent = true
+	}
+}
 vim.cmd 'colorscheme fluoromachine'
+
+-- Go setup
+require('go').setup()
+
 
 vim.cmd([[
 " Enable autocompletion

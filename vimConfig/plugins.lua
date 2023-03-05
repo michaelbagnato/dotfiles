@@ -24,6 +24,9 @@ use 'tpope/vim-fugitive'
 -- Treesitter - Highlighting improvements
 use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
 
+-- Go.nvim - Neovim support for Go
+use 'ray-x/go.nvim'
+
 -- Vim DevIcons - file type icons for NERDTree
 -- (Must be installed as the last plugin)
 use 'ryanoasis/vim-devicons'
