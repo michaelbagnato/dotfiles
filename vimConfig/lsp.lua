@@ -1,7 +1,7 @@
 local on_attach = function(client, bufnr)
 end
 
-local lspServers = {'tsserver', 'gopls'}
+local lspServers = {'tsserver', 'gopls', 'dockerls' }
 local nvim_lsp = require('lspconfig')
 local coq = require('coq')
 
