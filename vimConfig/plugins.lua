@@ -27,6 +27,12 @@ use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
 -- Go.nvim - Neovim support for Go
 use 'ray-x/go.nvim'
 
+use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
+
+
 -- Vim DevIcons - file type icons for NERDTree
 -- (Must be installed as the last plugin)
 use 'ryanoasis/vim-devicons'
