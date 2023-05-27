@@ -12,4 +12,4 @@ map("n", "ga", ":Git add %<CR>", silentnoremap)
 map("n", "gc", ":Git commit<CR>", silentnoremap)
 map("n", "gl", ":Git pull<CR>", silentnoremap)
 map("n", "gp", ":Git push<CR>", silentnoremap)
-
+map("n", "<C-V>", ":MarkdownPreview<CR>", silentnoremap)
