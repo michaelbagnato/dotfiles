@@ -27,10 +27,6 @@ fluoromachine:setup {
 }
 vim.cmd 'colorscheme fluoromachine'
 
--- Go setup
-require('go').setup()
-
-
 vim.cmd([[
 " Enable autocompletion
 COQnow
