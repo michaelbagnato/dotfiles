@@ -7,8 +7,13 @@ use 'maxmx03/FluoroMachine.nvim'
 -- Lualine.nvim - Status line config
 use 'nvim-lualine/lualine.nvim'
 
--- NERDTree - File explorer
-use 'preservim/nerdtree'
+-- Nvim-tree-lua: Neovim file explorer
+use {
+	'nvim-tree/nvim-tree.lua',
+	requires = {
+		'nvim-tree/nvim-web-devicons',
+	}
+}
 
 -- LSP Config - Configurations for LSPs
 use 'neovim/nvim-lspconfig'
@@ -29,7 +34,4 @@ use({
     run = function() vim.fn["mkdp#util#install"]() end,
 })
 
--- Vim DevIcons - file type icons for NERDTree
--- (Must be installed as the last plugin)
-use 'ryanoasis/vim-devicons'
 end)

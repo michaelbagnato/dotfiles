@@ -7,7 +7,7 @@ local silentnoremap = {
 	silent = true
 }
 
-map("n", "<C-E>", ":NERDTreeToggle<CR>", silentnoremap)
+map("n", "<C-E>", ":NvimTreeOpen<CR>", silentnoremap)
 map("n", "ga", ":Git add %<CR>", silentnoremap)
 map("n", "gc", ":Git commit<CR>", silentnoremap)
 map("n", "gl", ":Git pull<CR>", silentnoremap)

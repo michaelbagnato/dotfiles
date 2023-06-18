@@ -22,6 +22,8 @@ fm.setup {
 }
 vim.cmd.colorscheme('fluoromachine')
 
+require('nvim-tree').setup()
+
 vim.cmd([[
 " Enable autocompletion
 COQnow
