@@ -15,6 +15,8 @@ vim.o.smarttab = true
 
 vim.o.viminfo = false
 
+vim.g.copilot_assume_mapped = true
+
 local fm = require('fluoromachine')
 fm.setup {
 	glow = true,

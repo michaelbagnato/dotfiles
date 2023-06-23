@@ -29,9 +29,14 @@ use 'tpope/vim-fugitive'
 -- Treesitter - Highlighting improvements
 use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
 
+
+-- Markdown Preview
 use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
 })
+
+use 'github/copilot.vim'
+
 
 end)
