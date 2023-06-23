@@ -13,3 +13,5 @@ map("n", "gc", ":Git commit<CR>", silentnoremap)
 map("n", "gl", ":Git pull<CR>", silentnoremap)
 map("n", "gp", ":Git push<CR>", silentnoremap)
 map("n", "<C-V>", ":MarkdownPreview<CR>", silentnoremap)
+map("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
