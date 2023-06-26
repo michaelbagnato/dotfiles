@@ -30,7 +30,7 @@ ENABLE_CORRECTION="true"
 
 plugins=(git sudo npm zsh-syntax-highlighting)
 if [ $OSTYPE = "linux-gnu" ]; then
-	plugins+=(archlinux)
+	plugins+=(suse)
 fi
 
 source $ZSH/oh-my-zsh.sh
