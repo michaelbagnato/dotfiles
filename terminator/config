@@ -1,0 +1,22 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+  [[SynthwaveAlpha]]
+    background_color = "#241b30"
+    background_image = None
+    font = JetBrainsMono Nerd Font 13
+    foreground_color = "#f2f2e3"
+    show_titlebar = False
+    palette = "#241b30:#e60a70:#00986c:#adad3e:#6e29ad:#b300ad:#00b0b1:#b9b1bc:#7f7094:#e60a70:#0ae4a4:#f9f972:#aa54f9:#ff00f6:#00fbfd:#f2f2e3"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = SynthwaveAlpha
+[plugins]
