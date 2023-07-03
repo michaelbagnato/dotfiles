@@ -17,6 +17,10 @@ if [ $iconAnswer = 'y']; then
 	/usr/lib/plasma-changeicons OieIcons
 fi
 
+# Setup latte dock
+installPackage latte-dock
+cd ~/.config/latte/
+ln -sv ~/dotfiles/My\ Layout.layout.latte My\ Layout.layout.latte
 
 # Setup neovim
 installPackage neovim
