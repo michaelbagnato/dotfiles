@@ -9,6 +9,15 @@ function installPackage {
 	fi;
 }
 
+# Icon installation
+# TODO Adjust for various distros, and for various window environents
+vared -p "Do you want to install icons? (y/N)" iconAnswer
+if [ $iconAnswer = 'y']; then
+	sudo yay -S oie-icons-git
+	/usr/lib/plasma-changeicons OieIcons
+fi
+
+
 # Setup neovim
 installPackage neovim
 cd ~
