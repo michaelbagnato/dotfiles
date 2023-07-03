@@ -4,7 +4,7 @@ function installPackage {
 	packageName=$1
 	distro=$(cat /etc/*-release | head -1)
 	
-	if [ $distro = 'Manjaro Linux' ]; then
+	if [[ $distro == 'Manjaro Linux' || $distro == 'Arch Linux' ]]; then
 		sudo pacman -Sy packageName
 	fi;
 }
