@@ -9,23 +9,27 @@ function installPackage {
 	fi;
 }
 
+
 if [[ ! -v SUDO_USER ]]; then
 	echo "Must run this script as sudo!"
 	exit
 fi
+
+homeDirectory="/home/$SUDO_USER"
+dotfilesDirectory="$homeDirectory/dotfiles"
 
 # Setup neovim
 echo -n "Checking if neovim is installed..."
 if ! command -v nvim &> /dev/null; then
 	echo "missing!"
 	installPackage neovim
-	cd /home/$SUDO_USER
-	ln -sv /home/$SUDO_USER/dotfiles/vim.lua vim.lua
-	ln -sv /home/$SUDO_USER/dotfiles/vimConfig vimConfig
-	mkdir /home/$SUDO_USER/.config/nvim
-	touch /home/$SUDO_USER/.config/nvim/init.lua
-	echo "package.path = package.path .. ';/home/$SUDO_USER/?.lua'" >> home/$SUDO_USER/.config/nvim/init.lua
-	echo "require('vim')" >> home/$SUDO_USER/.config/nvim/init.lua
+	cd $homeDirectory
+	ln -sv "$dotfilesDirectory/vim.lua" vim.lua
+	ln -sv "$dotfilesDirectory/vimConfig" vimConfig
+	mkdir "$homeDirectory/.config/nvim"
+	touch "$homeDirectory/.config/nvim/init.lua"
+	echo "package.path = package.path .. ';/home/$SUDO_USER/?.lua'" >> "$homeDirectory/.config/nvim/init.lua"
+	echo "require('vim')" >> "$homeDirectory/.config/nvim/init.lua"
 else
 	echo "already installed!"
 fi
@@ -35,7 +39,7 @@ echo -n "Checking if zsh is installed..."
 if ! command -v zsh &> /dev/null; then
 	echo "missing!"
 	installPackage zsh
-	cd /home/$SUDO_USER
+	cd $homeDirectory
 else
 	echo "already installed!"
 fi
@@ -43,6 +47,7 @@ fi
 # Setup yay
 echo -n "Checking if yay is installed..."
 if ! command -v yay &> /dev/null; then
+
 	echo "missing"
 	installPackage yay
 else
@@ -57,14 +62,16 @@ if ! command -v kitty &> /dev/null; then
 else
 	echo "already installed"
 fi
+cd "$homeDirectory/.config/kitty"
+ln -sv "$dotfilesDirectory/kitty" kitty.conf
 
 # Setup dotfile submodules
 echo "Setting up dotfile submodules"
-cd /home/$SUDO_USER/dotfiles
+cd $dotfilesDirectory
 git submodule init
 git submodule update
 
 echo "Please note that installing Oh my Zsh doesn't work with this script."
 echo "You'll need to do that yourself, but we'll set the P10K config symlink for you"
-cd /home/$SUDO_USER/.oh-my-zsh/custom/themes
-ln -sv /home/$SUDO_USER/dotfiles/themes/powerlevel10k powerlevel10k
+cd "$homeDirectory/.oh-my-zsh/custom/themes
+ln -sv "$dotfilesDirectory/themes/powerlevel10k" powerlevel10k
