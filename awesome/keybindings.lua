@@ -2,7 +2,9 @@ local gears = require("gears")
 local awful = require("awful")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
-local modkey = "Mod4"
+local global = require("global")
+
+local modkey = global.modkey
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
