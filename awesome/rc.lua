@@ -325,8 +325,8 @@ globalkeys = gears.table.join(
 
     -- Prompt
     awful.key({ modkey },            "r",     function () 
-		 awful.util.spawn("dmenu_run") end,
-		 {description = "Open dmenu", group="launcher"}),
+		 awful.util.spawn("rofi -show run") end,
+		 {description = "Open rofi", group="launcher"}),
 
     awful.key({ modkey }, "x",
               function ()
