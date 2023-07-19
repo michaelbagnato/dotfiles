@@ -21,7 +21,28 @@ local global = require("global")
 local bindings = require("keybindings")
 local widgets = require("widgets")
 
-require("error-handling")
+local naughty = require("naughty")
+
+if awesome.startup_errors then
+    naughty.notify({ preset = naughty.config.presets.critical,
+                     title = "Oops, there were errors during startup!",
+                     text = awesome.startup_errors })
+end
+
+-- Handle runtime errors after startup
+do
+    local in_error = false
+    awesome.connect_signal("debug::error", function (err)
+        -- Make sure we don't go into an endless error loop
+        if in_error then return end
+        in_error = true
+
+        naughty.notify({ preset = naughty.config.presets.critical,
+                         title = "Oops, an error happened!",
+                         text = tostring(err) })
+        in_error = false
+    end)
+end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
@@ -124,7 +145,7 @@ local tasklist_buttons = gears.table.join(
                                           end))
 
 local function set_wallpaper(s)
-	gears.wallpaper.maximized("~/Pictures/Wallpaper.png", s)
+	gears.wallpaper.maximized("/home/michael/Pictures/Wallpaper.png", s)
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
@@ -193,6 +214,8 @@ root.buttons(gears.table.join(
     awful.button({ }, 5, awful.tag.viewprev)
 ))
 -- }}}
+
+root.keys(bindings.globalkeys)
 
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
