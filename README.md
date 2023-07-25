@@ -57,3 +57,20 @@ cd ~/.config/
 ln -sv ~/dotfiles/nvim nvim
 ```
 Open nvim and run `:PackerInstall`, then `:COQdeps`
+
+
+### Awesome
+Make sure rofi and volumeicon are installed:
+```zsh
+sudo pacman -S rofi volumeicon
+```
+
+Create a symlink to the awesome folder in your .config file:
+```zsh
+cd ~/.config
+ln -sv ~/dotfiles/awesome awesome
+```
+
+Put your preferred wallpaper in your Pictures directory and make sure it's called Wallpaper.jpg
+
+Restart Awesome
