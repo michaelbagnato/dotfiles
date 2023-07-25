@@ -1,3 +1,4 @@
+package.path = package.path .. ";/home/michael/.config/nvim/?.lua"
 require('plugins')
 require('statusline')
 require('treesitter')

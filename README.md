@@ -51,19 +51,9 @@ sudo pacman -S neovim
 
 You'll also need to get the Packer plugin from the AUR.  Details of the AUR package are available [here](https://aur.archlinux.org/packages/nvim-packer-git)
 
-In `~/.config/nvim`, create a file called `init.lua` and include the following code:
-```lua
-require("vim")
-```
-Create a symlink to vim.lua as follows:
+Create a symlink in your .config directory to the nvim directory
 ```zsh
-cd ~/.config/nvim
-ln -sv ~/dotfiles/vim.lua vim.lua
+cd ~/.config/
+ln -sv ~/dotfiles/nvim nvim
 ```
-
-Create a symlink to the `vimConfig` directory:
-```zsh
-cd ~
-ln -sv ~/dotfiles/vimConfig vimConfig
-```
-
+Open nvim and run `:PackerInstall`, then `:COQdeps`
