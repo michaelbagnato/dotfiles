@@ -145,7 +145,7 @@ local tasklist_buttons = gears.table.join(
                                           end))
 
 local function set_wallpaper(s)
-	gears.wallpaper.maximized("/home/michael/Pictures/Wallpaper.png", s)
+	gears.wallpaper.maximized("/home/michael/Pictures/Wallpaper.jpg", s)
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
@@ -341,3 +341,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart applications
 awful.spawn.with_shell("picom -b")
+awful.spawn.with_shell("volumeicon")
