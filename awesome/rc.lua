@@ -128,7 +128,10 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+        buttons = tasklist_buttons,
+		  style = {
+				disable_task_name = true
+		  }
     }
 
     -- Create the wibox
@@ -147,7 +150,16 @@ awful.screen.connect_for_each_screen(function(s)
             --s.mytaglist,
             s.mypromptbox,
         },
-        s.mytasklist, -- Middle widget
+        -- Middle widget
+		  {
+				layout = wibox.layout.fixed.horizontal,
+				{
+					widget = wibox.container.margin,
+					left = 5,
+					right = 5,
+					s.mytasklist
+				}
+		  },
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
