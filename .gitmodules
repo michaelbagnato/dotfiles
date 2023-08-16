@@ -1,6 +1,6 @@
 [submodule "themes/powerlevel10k"]
 	path = themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
-[submodule "awesome/battery-widget"]
-	path = awesome/battery-widget
-	url = https://github.com/deficient/battery-widget
+[submodule "awesome/awesome-wm-widgets"]
+	path = awesome/widgets
+	url = https://github.com/streetturtle/awesome-wm-widgets
