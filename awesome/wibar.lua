@@ -4,7 +4,7 @@ local gears = require("gears")
 local wibox = require("wibox")
 local global = require("global")
 
-local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 
 local tasklist_buttons = gears.table.join(
                      awful.button({ }, 1, function (c)
@@ -49,7 +49,9 @@ local battery_widget = {
 	widget = wibox.container.margin,
 	left = 5,
 	right = 5,
-	battery_widget()
+	batteryarc_widget({
+		show_current_level = true
+	})
 }
 
 -- Create a volume widget
@@ -115,7 +117,12 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         {
             layout = wibox.layout.fixed.horizontal,
-            layout_widget,
+				{
+					widget = wibox.container.margin,
+					left = 5,
+					right = 5,
+					layout_widget
+				},
             battery_widget,
             volume_widget,
             weather_widget,
