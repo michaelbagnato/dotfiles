@@ -2,5 +2,5 @@
 	path = themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
 [submodule "awesome/awesome-wm-widgets"]
-	path = awesome/widgets
-	url = https://github.com/streetturtle/awesome-wm-widgets
+	path = awesome/awesome-wm-widgets
+	url = https://github.com/streetturtle/awesome-wm-widgets/
