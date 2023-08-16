@@ -5,6 +5,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 local global = require("global")
 
 local modkey = global.modkey
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
@@ -199,7 +200,12 @@ for i = 1, 9 do
                           end
                       end
                   end,
-                  {description = "toggle focused client on tag #" .. i, group = "tag"})
+                  {description = "toggle focused client on tag #" .. i, group = "tag"}),
+
+		
+			awful.key({}, "XF86AudioLowerVolume", function () volume_widget:dec(1) end),
+			awful.key({}, "XF86AudioRaiseVolume", function () volume_widget:inc(1) end),
+			awful.key({}, "XF86AudioMute", function () volume_widget:toggle() end)
     )
 end
 

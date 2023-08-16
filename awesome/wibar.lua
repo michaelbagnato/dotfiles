@@ -5,6 +5,7 @@ local wibox = require("wibox")
 local global = require("global")
 
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 
 local tasklist_buttons = gears.table.join(
                      awful.button({ }, 1, function (c)
@@ -59,9 +60,7 @@ local volume_widget = {
 	widget = wibox.container.margin,
 	left = 5,
 	right = 5,
-	wibox.widget {
-   	widget = wibox.widget.textbox,
-	}
+	volume_widget()
 }
 
 -- Create a weather widget
