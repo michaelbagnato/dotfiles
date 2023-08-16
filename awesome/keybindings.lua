@@ -200,12 +200,7 @@ for i = 1, 9 do
                           end
                       end
                   end,
-                  {description = "toggle focused client on tag #" .. i, group = "tag"}),
-
-		
-			awful.key({}, "XF86AudioLowerVolume", function () volume_widget:dec(1) end),
-			awful.key({}, "XF86AudioRaiseVolume", function () volume_widget:inc(1) end),
-			awful.key({}, "XF86AudioMute", function () volume_widget:toggle() end)
+                  {description = "toggle focused client on tag #" .. i, group = "tag"})
     )
 end
 

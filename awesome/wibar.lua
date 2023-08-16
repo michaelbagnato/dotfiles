@@ -5,7 +5,6 @@ local wibox = require("wibox")
 local global = require("global")
 
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
-local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 local tasklist_buttons = gears.table.join(
                      awful.button({ }, 1, function (c)
                                               if c == client.focus then
@@ -52,14 +51,6 @@ local battery_widget = {
 	batteryarc_widget({
 		show_current_level = true
 	})
-}
-
--- Create a volume widget
-local volume_widget = {
-	widget = wibox.container.margin,
-	left = 5,
-	right = 5,
-	volume_widget()
 }
 
 -- Create a text widget to display the date and time
@@ -110,7 +101,6 @@ awful.screen.connect_for_each_screen(function(s)
 					layout_widget
 				},
             battery_widget,
-            volume_widget,
         },
         app_icons_widget,
         {
