@@ -6,7 +6,6 @@ local global = require("global")
 
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
-
 local tasklist_buttons = gears.table.join(
                      awful.button({ }, 1, function (c)
                                               if c == client.focus then
@@ -63,18 +62,6 @@ local volume_widget = {
 	volume_widget()
 }
 
--- Create a weather widget
-local weather_widget = {
-	widget = wibox.container.margin,
-	left = 5,
-	right = 5,
-	wibox.widget {
-   	widget = wibox.widget.textbox,
-	   font = "Font Awesome 5 Free Solid 12",
-   	markup = "<span color='#61afef'></span> 25°C",
-	}
-}
-
 -- Create a text widget to display the date and time
 local datetime_widget = wibox.widget.textclock("%a %b %d, %H:%M")
 
@@ -124,7 +111,6 @@ awful.screen.connect_for_each_screen(function(s)
 				},
             battery_widget,
             volume_widget,
-            weather_widget,
         },
         app_icons_widget,
         {
