@@ -21,28 +21,6 @@ ln -sv ~/dotfiles/terminator terminator
 If you have terminator open, restart it.
 
 
-### Oh My Zsh
-Install Oh My Zsh following the instructions on their website.
-
-Delete the `.zshrc` file created during the installation process, and instead create a symlink to the one here:
-```zsh
-cd ~
-ln -sv ~/dotfiles/zshrc .zshrc
-```
-
-Create a symlink to the powerlevel10k theme:
-```zsh
-cd ~/.oh-my-zsh/custom/themes/
-ln -sv ~/dotfiles/themes/powerlevel10k/ powerlevel10k
-```
-
-Go back into the dotfiles directory, and setup the submodules in the repo as they contain the theming:
-```zsh
-cd ~/dotfiles
-git submodule init
-git submodule update
-```
-
 ### Neovim
 You'll need to have Neovim installed:
 ```zsh
