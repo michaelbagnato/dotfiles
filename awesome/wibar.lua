@@ -3,6 +3,7 @@ local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 local global = require("global")
+local widgets = require("widgets")
 
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local tasklist_buttons = gears.table.join(
@@ -105,6 +106,7 @@ awful.screen.connect_for_each_screen(function(s)
         app_icons_widget,
         {
             layout = wibox.layout.fixed.horizontal,
+				widgets.battery_widget,
 				wibox.widget.systray(),
 				datetime_widget,
         }
