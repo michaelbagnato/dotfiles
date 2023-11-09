@@ -95,7 +95,12 @@ awful.screen.connect_for_each_screen(function(s)
         app_icons_widget,
         {
             layout = wibox.layout.fixed.horizontal,
-				widgets.battery_widget,
+				{
+					widgets.battery_widget,
+					bottom=1,
+					color="#FF00FF",
+					widget=wibox.container.margin
+				},
 				wibox.widget.systray(),
 				datetime_widget,
         }
