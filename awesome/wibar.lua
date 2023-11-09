@@ -5,7 +5,6 @@ local wibox = require("wibox")
 local global = require("global")
 local widgets = require("widgets")
 
-local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local tasklist_buttons = gears.table.join(
                      awful.button({ }, 1, function (c)
                                               if c == client.focus then
@@ -44,15 +43,6 @@ local taglist_buttons = gears.table.join(
                     awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
                     awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
                 )
-
-local battery_widget = {
-	widget = wibox.container.margin,
-	left = 5,
-	right = 5,
-	batteryarc_widget({
-		show_current_level = true
-	})
-}
 
 -- Create a text widget to display the date and time
 local datetime_widget = wibox.widget.textclock("%a %b %d, %H:%M")

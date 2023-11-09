@@ -5,7 +5,6 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 local global = require("global")
 
 local modkey = global.modkey
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
