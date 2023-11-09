@@ -101,7 +101,6 @@ awful.screen.connect_for_each_screen(function(s)
 					right = 5,
 					layout_widget
 				},
-            battery_widget,
         },
         app_icons_widget,
         {
