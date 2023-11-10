@@ -1,5 +1,5 @@
 terminal = "terminator"
-editor = os.getenv("EDITOR") or "nano"
+editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 return {

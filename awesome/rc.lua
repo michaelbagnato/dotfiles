@@ -199,5 +199,5 @@ beautiful.useless_gap = 5
 beautiful.gap_single_client = true
 -- Autostart applications
 awful.spawn.with_shell("picom -b")
-awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("pgrep -x volumeicon || volumeicon")
