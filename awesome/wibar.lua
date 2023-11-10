@@ -95,6 +95,8 @@ awful.screen.connect_for_each_screen(function(s)
         app_icons_widget,
         {
             layout = wibox.layout.fixed.horizontal,
+				spacing = 5,
+				widgets.weather_widget,
 				widgets.battery_widget,
 				wibox.widget.systray(),
 				datetime_widget,

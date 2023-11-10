@@ -17,6 +17,12 @@ local battery_widget = awful.widget.watch("acpi", 10, function(widget, stdout)
 	widget.font = "JetBrainsMono Nerd Font 9"
 end)
 
+local weather_widget = awful.widget.watch("curl wttr.in/Melbourne?format=3", 60, function(widget, stdout)
+	widget:set_markup("<span color='#04D9FF'>" .. stdout .. "</span>")
+	widget.font = "JetBrainsMono Nerd Font 9"
+end)
+
 return {
 	battery_widget = battery_widget,
+	weather_widget = weather_widget
 }
