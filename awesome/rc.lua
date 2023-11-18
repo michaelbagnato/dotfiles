@@ -123,7 +123,6 @@ awful.rules.rules = {
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = false }
     },
-
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { screen = 1, tag = "2" } },
@@ -194,6 +193,12 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+client.connect_signal("property::maximized", function(c)
+	-- Don't maximize Chromium
+	if c.class == "Chromium" then
+		c.maximized = false	
+	end
+end)
 
 beautiful.useless_gap = 5 
 beautiful.gap_single_client = true
