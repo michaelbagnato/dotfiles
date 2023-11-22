@@ -1,17 +1,11 @@
-local function map(kind, lhs, rhs, opts)
-	vim.api.nvim_set_keymap(kind, lhs, rhs, opts)
+local function map(lhs, rhs)
+	vim.keymap.set("n", lhs, rhs, { noremap = true, silent = true })
 end
 
-local silentnoremap = {
-	noremap = true,
-	silent = true
-}
-
-map("n", "<C-E>", ":NvimTreeToggle<CR>", silentnoremap)
-map("n", "ga", ":Git add %<CR>", silentnoremap)
-map("n", "gc", ":Git commit<CR>", silentnoremap)
-map("n", "gl", ":Git pull<CR>", silentnoremap)
-map("n", "gp", ":Git push<CR>", silentnoremap)
-map("n", "<C-V>", ":MarkdownPreview<CR>", silentnoremap)
-map("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+map("<C-E>", ":NvimTreeToggle<CR>")
+map("ga", ":Git add %<CR>")
+map("gc", ":Git commit<CR>")
+map("gl", ":Git pull<CR>")
+map("gp", ":Git push<CR>")
+vim.keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 

@@ -1,42 +1,36 @@
-vim.cmd [[packadd packer.nvim]]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-return require('packer').startup(function(use)
---[[
--- FluoroMachine colour scheme
-use 'maxmx03/FluoroMachine.nvim'
-
--- Lualine.nvim - Status line config
-use 'nvim-lualine/lualine.nvim'
-
--- Nvim-tree-lua: Neovim file explorer
-use {
-	'nvim-tree/nvim-tree.lua',
-	requires = {
-		'nvim-tree/nvim-web-devicons',
+require("lazy").setup({
+	'maxmx03/FluoroMachine.nvim',
+	'nvim-lualine/lualine.nvim',
+	'neovim/nvim-lspconfig',
+	'williamboman/nvim-lsp-installer',
+	'github/copilot.vim',
+	'lewis6991/gitsigns.nvim',
+	{ 
+		'nvim-treesitter/nvim-treesitter', 
+		cmd = "TSUpdate" 
+	},
+	{ 
+		'ms-jpq/coq_nvim', 
+		branch = 'coq' 
+	},
+	{ 
+		'nvim-tree/nvim-tree.lua', 
+		dependencies = {
+			'nvim-tree/nvim-web-devicons'
+		}
 	}
-}
 
--- LSP Config - Configurations for LSPs
-use 'neovim/nvim-lspconfig'
-use 'williamboman/nvim-lsp-installer'
-
--- Coq - Autocompletion
-use {'ms-jpq/coq_nvim', branch = 'coq'}
-
--- Fugitive - Git support for Vim
--- TODO Look for Nvim replacement
-use 'tpope/vim-fugitive'
-
--- Treesitter - Highlighting improvements
-use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
-
-
--- Markdown Preview
-use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
 })
-
-use 'github/copilot.vim'
---]]
-end)
