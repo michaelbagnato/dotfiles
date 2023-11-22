@@ -1,7 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-
+--[[
 -- FluoroMachine colour scheme
 use 'maxmx03/FluoroMachine.nvim'
 
@@ -38,4 +38,5 @@ use({
 })
 
 use 'github/copilot.vim'
+--]]
 end)
