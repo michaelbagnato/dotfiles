@@ -68,7 +68,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 client.connect_signal("property::maximized", function(c)
 	-- Don't maximize Chromium
-	if c.class == "Chromium" then
+	if c.class == "Brave" then
 		c.maximized = false	
 	end
 end)

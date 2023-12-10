@@ -6,8 +6,7 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
--- Widget and layout library
-local wibox = require("wibox")
+
 -- Theme handling library
 local beautiful = require("beautiful")
 
@@ -46,15 +45,6 @@ awful.layout.layouts = {
     -- awful.layout.suit.corner.se,
 }
 -- }}}
-
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
-
--- {{{ Wibar
--- Create a textclock widget
-mytextclock = wibox.widget.textclock()
-
--- Create a wibox for each screen and add it
 
 local function set_wallpaper(s)
 	gears.wallpaper.maximized("/home/michael/Pictures/Wallpaper.jpg", s)
