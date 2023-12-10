@@ -17,7 +17,6 @@ require("lazy").setup({
 	'neovim/nvim-lspconfig',
 	'williamboman/nvim-lsp-installer',
 	'github/copilot.vim',
-	'lewis6991/gitsigns.nvim',
 	{ 
 		'nvim-treesitter/nvim-treesitter', 
 		cmd = "TSUpdate" 
