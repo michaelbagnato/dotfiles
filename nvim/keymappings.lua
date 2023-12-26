@@ -1,7 +1,3 @@
-local function map(lhs, rhs)
-	vim.keymap.set("n", lhs, rhs, { noremap = true, silent = true })
-end
-
-map("<C-E>", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<C-E>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
