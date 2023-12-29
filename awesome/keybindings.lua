@@ -59,7 +59,7 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-	 awful.key({modkey, }, "q", function() awful.spawn("i3lock") end,
+	 awful.key({modkey, }, "q", function() awful.spawn("fish -c 'lock'") end,
 	 	{description = "lock screen", group = "awesome"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
