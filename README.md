@@ -38,10 +38,12 @@ Open nvim and run `:PackerInstall`, then `:COQdeps`
 
 
 ### Awesome
-Make sure rofi and volumeicon are installed:
+Make sure rofi, volumeicon and i3lock-color are installed:
 ```zsh
 sudo pacman -S rofi volumeicon
 ```
+
+You'll also need to get i3lock-color from the AUR.  Details of the AUR package are available [here](https://aur.archlinux.org/packages/i3lock-color)
 
 Create a symlink to the awesome folder in your .config file:
 ```zsh
