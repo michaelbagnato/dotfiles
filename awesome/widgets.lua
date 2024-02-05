@@ -1,9 +1,9 @@
 local awful = require("awful")
 local wibox = require("wibox")
 
-local color = ''
-
+local weather_widget = require("widgets.weather")
 local battery_widget = awful.widget.watch("acpi", 10, function(widget, stdout)
+	local color = ''
 	local output = string.match(stdout, "%d+%%")
 	local battery_level = tonumber(string.match(output, "%d+"))
 	if string.match(stdout, "Charging") and battery_level < 100 then
@@ -17,10 +17,6 @@ local battery_widget = awful.widget.watch("acpi", 10, function(widget, stdout)
 	widget.font = "JetBrainsMono Nerd Font 9"
 end)
 
-local weather_widget = awful.widget.watch("curl wttr.in/Melbourne?format=1", 60, function(widget, stdout)
-	widget:set_markup("<span color='#04D9FF'>" .. stdout .. "</span>")
-	widget.font = "JetBrainsMono Nerd Font 9"
-end)
 
 return {
 	battery_widget = battery_widget,
