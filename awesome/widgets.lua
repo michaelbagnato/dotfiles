@@ -1,5 +1,4 @@
 local awful = require("awful")
-local wibox = require("wibox")
 
 local weather_widget = require("widgets.weather")
 local battery_widget = awful.widget.watch("acpi", 10, function(widget, stdout)
