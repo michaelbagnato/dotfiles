@@ -23,18 +23,15 @@ If you have terminator open, restart it.
 
 ### Neovim
 You'll need to have Neovim installed:
-```zsh
+```fish
 sudo pacman -S neovim
 ```
 
-You'll also need to get the Packer plugin from the AUR.  Details of the AUR package are available [here](https://aur.archlinux.org/packages/nvim-packer-git)
-
-Create a symlink in your .config directory to the nvim directory
-```zsh
+Create a symlink in your .config directory to the nvim directory:
+```fish
 cd ~/.config/
 ln -sv ~/dotfiles/nvim nvim
 ```
-Open nvim and run `:PackerInstall`, then `:COQdeps`
 
 
 ### Awesome

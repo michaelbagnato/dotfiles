@@ -1,21 +1,23 @@
-local on_attach = function(client, bufnr)
+-- Setting up LSP configs with default keymaps
+local lsp_zero = require("lsp-zero").preset({})
+lsp_zero.on_attach = function(client, bufnr)
+   lsp_zero.default_keymaps(client, bufnr)
 end
+lsp_zero.setup()
 
-local lspServers = {'tsserver'}
-local nvim_lsp = require('lspconfig')
-local coq = require('coq')
-
-require("nvim-lsp-installer").setup{}
-for _, lsp in ipairs(lspServers) do
-	nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities({
-		on_attach = on_attach
-	}))
-end
-
--- Diagnostic window
-vim.diagnostic.config({
-	virtual_text = false
+-- Automatic installation of LSPs
+require("mason").setup({})
+require("mason-lspconfig").setup({
+   ensure_installed = { "lua_ls" },
+  handlers = {
+      lsp_zero.default_setup,
+  }
 })
 
-vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, border='double'})]]
+-- Setting up autocompletion
+local cmp = require("cmp")
+cmp.setup({
+   mapping = {
+      ['<CR>'] = cmp.mapping.confirm({ select = false }),
+   },
+})

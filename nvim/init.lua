@@ -1,33 +1,18 @@
-package.path = package.path .. ";/home/michael/.config/nvim/?.lua"
-require('plugins')
-require('statusline')
-require('treesitter')
-require('lsp')
-require('keymappings')
-vim.o.number = true
+package.path = os.getenv("HOME") .. "/.config/nvim/?.lua;" .. package.path
+require("keybindings")
+require("plugins")
+require("lsp")
 
--- Three space tabs
-vim.o.tabstop = 3
-vim.o.shiftwidth = 3
+-- Show line numbers
+vim.opt.number = true
 
--- Smart tabs
-vim.o.smarttab = true
+-- Tab width of 3
+vim.opt.shiftwidth = 3
+vim.opt.expandtab = true
 
-vim.o.viminfo = false
+-- Clear registers on load
+vim.opt.shada = nil
 
-vim.g.copilot_assume_mapped = true
-
-local fm = require('fluoromachine')
-fm.setup {
-	glow = true,
-	transparent = 'true',
-}
-vim.cmd.colorscheme('fluoromachine')
-
-require('nvim-tree').setup()
-
-
-vim.cmd([[
-" Enable autocompletion
-COQnow --shut-up
-]])
+-- Colour scheme
+vim.opt.termguicolors = true
+vim.cmd("colorscheme dracula")
