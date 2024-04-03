@@ -34,6 +34,13 @@ local pluginDetails = {
    -- Nvim-cmp: Code completion
    "hrsh7th/nvim-cmp",
    "hrsh7th/cmp-nvim-lsp",
-   "L3MON4D3/LuaSnip"
+   "L3MON4D3/LuaSnip",
+
+   -- Telescope: File search tool
+   {
+	"nvim-telescope/telescope.nvim",
+        branch = "0.1.x",
+        dependencies = { "nvim-lua/plenary.nvim" }
+   }
 }
 require("lazy").setup(pluginDetails)
