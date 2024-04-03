@@ -41,6 +41,15 @@ local pluginDetails = {
 	"nvim-telescope/telescope.nvim",
         branch = "0.1.x",
         dependencies = { "nvim-lua/plenary.nvim" }
+   },
+
+   -- nvim-tree: File explorer
+   {
+      "nvim-tree/nvim-tree.lua",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      config = function()
+         require("nvim-tree").setup({})
+      end
    }
 }
 require("lazy").setup(pluginDetails)
