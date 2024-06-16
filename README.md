@@ -3,51 +3,24 @@ In here you'll find a few config files that make my life easier and just
 generally keep my laptop going.
 
 ## How to use these files
-Clone this repo, and put it in your home directory.
-The instructions from here are assuming you're running Arch Linux.
+These instructions assume you are using Arch Linux.
 
+Clone the repo and place it in your home directory.
 
-### Terminator
-You'll need to have terminator installed:
-```zsh
-sudo pacman -S terminator
-```
+Install the applications that you want to use with these files.  Applications 
+covered are:
+    * Fish
+    * Kitty
+    * Neovim
+    * Qtile
 
-Create a symlink in your .config directory to the terminator directory:
-```zsh
-cd ~/.config
-ln -sv ~/dotfiles/terminator terminator
-```
-If you have terminator open, restart it.
-
-
-### Neovim
-You'll need to have Neovim installed:
+Install GNU Stow:
 ```fish
-sudo pacman -S neovim
+sudo pacman -S stow
 ```
 
-Create a symlink in your .config directory to the nvim directory:
+Run Stow on the directory:
 ```fish
-cd ~/.config/
-ln -sv ~/dotfiles/nvim nvim
+cd ~/dotfiles
+stow .
 ```
-
-
-### Awesome
-Make sure rofi, volumeicon and i3lock-color are installed:
-```zsh
-sudo pacman -S rofi volumeicon
-```
-
-You'll also need to get i3lock-color from the AUR.  Details of the AUR package are available [here](https://aur.archlinux.org/packages/i3lock-color)
-
-Create a symlink to the awesome folder in your .config file:
-```zsh
-cd ~/.config
-ln -sv ~/dotfiles/awesome awesome
-```
-
-Put your preferred wallpaper in your Pictures directory and make sure it's called Wallpaper.jpg
-
-Restart Awesome
