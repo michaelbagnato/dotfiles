@@ -77,8 +77,9 @@ keys = [
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], "r", lazy.spawn("rofi -show run"), desc="Run a command using Rofi"),
 
+    # Volume control
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pipewire set Master 5%-"), desc="Lower volume"),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pipewire set Master 5%+"), desc="Raise volume"),
     Key([], "XF86AudioMute", lazy.spawn("amixer -D pipewire set Master 1+ toggle"), desc="Mute"),
@@ -135,7 +136,7 @@ layouts = [
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
-    # layout.TreeTab(),
+    layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
@@ -151,7 +152,7 @@ screens = [
     Screen(
         wallpaper="~/Wallpaper.png",
         wallpaper_mode="stretch",
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
                 widget.CurrentLayout(),
                 widget.GroupBox(),
@@ -164,8 +165,10 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.StatusNotifier(),
+                widget.Bluetooth(),
+                widget.BatteryIcon(),
                 widget.Battery(
-                    format='Battery: {percent:2.0%}',
+                    format='{percent:2.0%}',
                     notify_below=10,
                 ),
                 widget.Volume(
