@@ -83,6 +83,8 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pipewire set Master 5%-"), desc="Lower volume"),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pipewire set Master 5%+"), desc="Raise volume"),
     Key([], "XF86AudioMute", lazy.spawn("amixer -D pipewire set Master 1+ toggle"), desc="Mute"),
+
+    Key([], "Print", lazy.spawn("grim", "Take a screenshot"))
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -126,8 +128,9 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4, margin=10),
+    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2, margin=5),
     layout.Max(margin=10),
+    layout.Floating(margin=10),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -138,7 +141,7 @@ layouts = [
     # layout.Tile(),
     layout.TreeTab(),
     # layout.VerticalTile(),
-    # layout.Zoomy(),
+    layout.Zoomy(),
 ]
 
 widget_defaults = dict(
@@ -155,17 +158,13 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
+                widget.GroupBox(
+                    inactive="#7d827e"
                 ),
+                widget.Spacer(),
+                widget.WindowTabs(),
+                widget.Spacer(),
                 widget.StatusNotifier(),
-                widget.Bluetooth(),
                 widget.BatteryIcon(),
                 widget.Battery(
                     format='{percent:2.0%}',
@@ -177,9 +176,10 @@ screens = [
                 ),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
             ],
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            32,
+            #border_width=[2, 2, 2, 2],
+            #border_color=["f542e0", "f542e0", "f542e0", "f542e0"],
+            background="#5420F5.6",
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling

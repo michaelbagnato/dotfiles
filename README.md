@@ -9,10 +9,12 @@ Clone the repo and place it in your home directory.
 
 Install the applications that you want to use with these files.  Applications 
 covered are:
-    * Fish
-    * Kitty
-    * Neovim
-    * Qtile
+    * Screenshot tool: Grim
+    * Shell: Fish
+    * Terminal: Kitty 
+    * Text editor: Neovim
+    * Volume control: Amixer
+    * Window manager: Qtile
 
 Install GNU Stow:
 ```fish
