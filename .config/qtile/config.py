@@ -128,7 +128,11 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2, margin=5),
+    layout.Columns(
+        border_focus_stack=["#d75f5f", "#8f3d3d"], 
+        border_width=2, 
+        margin=5,
+        margin_on_single=10),
     layout.Max(margin=10),
     layout.Floating(margin=10),
     # Try more layouts by unleashing below layouts.
@@ -158,11 +162,9 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
-                widget.GroupBox(
-                    inactive="#7d827e"
-                ),
+                widget.GroupBox(),
                 widget.Spacer(),
-                widget.WindowTabs(),
+                widget.WindowTabs(scroll=True, width=1000, scroll_clear=True),
                 widget.Spacer(),
                 widget.StatusNotifier(),
                 widget.BatteryIcon(),
@@ -179,7 +181,7 @@ screens = [
             32,
             #border_width=[2, 2, 2, 2],
             #border_color=["f542e0", "f542e0", "f542e0", "f542e0"],
-            background="#5420F5.6",
+            #background="#5420F5.6",
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
