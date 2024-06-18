@@ -161,27 +161,27 @@ screens = [
         wallpaper_mode="stretch",
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
+                widget.CurrentLayout(padding=10),
                 widget.GroupBox(),
                 widget.Spacer(),
-                widget.WindowTabs(scroll=True, width=1000, scroll_clear=True),
+                widget.Clock(format="%d/%m/%Y %a %I:%M %p"),
                 widget.Spacer(),
+                widget.OpenWeather(location="Melbourne", format="{main_temp}°{units_temperature} {icon}"),
                 widget.StatusNotifier(),
                 widget.BatteryIcon(),
                 widget.Battery(
                     format='{percent:2.0%}',
                     notify_below=10,
+                    padding_right=10
                 ),
                 widget.Volume(
                     device='pipewire',
                     fmt='Volume: {}'
                 ),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
             ],
             32,
-            #border_width=[2, 2, 2, 2],
-            #border_color=["f542e0", "f542e0", "f542e0", "f542e0"],
-            #background="#5420F5.6",
+            background="#570296.6",
+            margin=[10, 5, 5, 5],
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
