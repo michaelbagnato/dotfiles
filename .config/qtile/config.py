@@ -166,14 +166,17 @@ screens = [
                 widget.Spacer(),
                 widget.Clock(format="%d/%m/%Y %a %I:%M %p"),
                 widget.Spacer(),
-                widget.OpenWeather(location="Melbourne", format="{main_temp}°{units_temperature} {icon}"),
-                widget.StatusNotifier(),
+                widget.OpenWeather(
+                    location="Melbourne", 
+                    format="{location_city}: {main_temp}°{units_temperature} {icon}",
+                ),
+                widget.Sep(),
                 widget.BatteryIcon(),
                 widget.Battery(
                     format='{percent:2.0%}',
                     notify_below=10,
-                    padding_right=10
                 ),
+                widget.Sep(),
                 widget.Volume(
                     device='pipewire',
                     fmt='Volume: {}'
