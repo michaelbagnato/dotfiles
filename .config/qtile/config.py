@@ -24,15 +24,18 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from libqtile import bar, layout, qtile, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile import layout, qtile 
+from libqtile.config import Click, Drag, Group, Key, Match
 from libqtile.lazy import lazy
+
+# Michael's imports
 from keys import get_keys
+from layouts import get_layouts
+from screens import get_screens
 
 mod = "mod4"
 terminal = "kitty"
 screnshot = "grim"
-
 
 keys = get_keys(mod, terminal, screnshot)
 
@@ -76,26 +79,7 @@ for i in groups:
         ]
     )
 
-layouts = [
-    layout.Columns(
-        border_focus_stack=["#d75f5f", "#8f3d3d"], 
-        border_width=2, 
-        margin=5,
-        margin_on_single=10),
-    layout.Max(margin=10),
-    layout.Floating(margin=10),
-    # Try more layouts by unleashing below layouts.
-    # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-    # layout.Matrix(),
-    # layout.MonadTall(),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    # layout.Tile(),
-    layout.TreeTab(),
-    # layout.VerticalTile(),
-    layout.Zoomy(),
-]
+layouts = get_layouts()
 
 widget_defaults = dict(
     font=" JetBrainsMono Nerd Font",
@@ -103,50 +87,7 @@ widget_defaults = dict(
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
-
-screens = [
-    Screen(
-        wallpaper="~/Wallpaper.png",
-        wallpaper_mode="stretch",
-        top=bar.Bar(
-            [
-                widget.CurrentLayout(padding=10),
-                widget.GroupBox(),
-                widget.WindowName(
-                    scroll = True,
-                    scroll_clear = True
-                ),
-                widget.Spacer(),
-                widget.Clock(format="%d/%m/%Y %a %I:%M %p"),
-                widget.Spacer(),
-                widget.Wttr(
-                    location={"Melbourne": "Melbourne"} 
-                ),
-                widget.Sep(),
-                widget.BatteryIcon(),
-                widget.Battery(
-                    format='{percent:2.0%}',
-                    notify_below=10,
-                ),
-                widget.Sep(),
-                widget.Volume(
-                    device='pipewire',
-                    fmt='🔊 {}',
-                    mute_format='🔇'
-                ),
-                widget.Sep(),
-                widget.StatusNotifier()
-            ],
-            32,
-            background="#570296",
-            margin=[10, 5, 5, 5],
-        ),
-        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
-        # By default we handle these events delayed to already improve performance, however your system might still be struggling
-        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
-        # x11_drag_polling_rate = 60,
-    ),
-]
+screens = get_screens()
 
 # Drag floating layouts.
 mouse = [
