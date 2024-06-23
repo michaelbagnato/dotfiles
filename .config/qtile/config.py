@@ -150,7 +150,7 @@ layouts = [
 
 widget_defaults = dict(
     font=" JetBrainsMono Nerd Font",
-    fontsize=13,
+    fontsize=15,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
@@ -163,12 +163,15 @@ screens = [
             [
                 widget.CurrentLayout(padding=10),
                 widget.GroupBox(),
+                widget.WindowName(
+                    scroll = True,
+                    scroll_clear = True
+                ),
                 widget.Spacer(),
                 widget.Clock(format="%d/%m/%Y %a %I:%M %p"),
                 widget.Spacer(),
-                widget.OpenWeather(
-                    location="Melbourne", 
-                    format="{location_city}: {main_temp}°{units_temperature} {icon}",
+                widget.Wttr(
+                    location={"Melbourne": "Melbourne"} 
                 ),
                 widget.Sep(),
                 widget.BatteryIcon(),
@@ -179,11 +182,14 @@ screens = [
                 widget.Sep(),
                 widget.Volume(
                     device='pipewire',
-                    fmt='Volume: {}'
+                    fmt='🔊 {}',
+                    mute_format='🔇'
                 ),
+                widget.Sep(),
+                widget.StatusNotifier()
             ],
             32,
-            background="#570296.6",
+            background="#570296",
             margin=[10, 5, 5, 5],
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
