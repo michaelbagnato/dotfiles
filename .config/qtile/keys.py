@@ -49,7 +49,7 @@ def get_keys(mod, terminal, screenshot):
         Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
         Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
         Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-        Key([mod], "r", lazy.spawn("rofi -show run"), desc="Run a command using Rofi"),
+        Key([mod], "r", lazy.spawn("rofi -icon-theme candy-icons -show-icons -show run"), desc="Run a command using Rofi"),
 
         # Volume control
         Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pipewire set Master 5%-"), desc="Lower volume"),
