@@ -1,8 +1,10 @@
+from libqtile import qtile
 from libqtile.config import Key
 from libqtile.lazy import lazy
+from constants import mod, terminal, screenshot
 
-def get_keys(mod, terminal, screenshot):
-    return [
+def get_keys():
+    keys = [
         # Switch between windows
         Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
         Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
@@ -58,3 +60,18 @@ def get_keys(mod, terminal, screenshot):
 
         Key([], "Print", lazy.spawn(screenshot, "Take a screenshot"))
     ]
+
+    # Add key bindings to switch VTs in Wayland.
+    # We can't check qtile.core.name in default config as it is loaded before qtile is started
+    # We therefore defer the check until the key binding is run by using .when(func=...)
+    for vt in range(1, 8):
+        keys.append(
+            Key(
+                ["control", "mod1"],
+                f"f{vt}",
+                lazy.core.change_vt(vt).when(func=lambda: qtile.core.name == "wayland"),
+                desc=f"Switch to VT{vt}",
+            )
+        )
+
+    return keys
