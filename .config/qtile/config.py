@@ -32,10 +32,7 @@ from libqtile.lazy import lazy
 from keys import get_keys
 from layouts import get_layouts
 from screens import get_screens
-
-mod = "mod4"
-terminal = "kitty"
-screnshot = "grim"
+from constants import mod, terminal, screnshot
 
 keys = get_keys(mod, terminal, screnshot)
 

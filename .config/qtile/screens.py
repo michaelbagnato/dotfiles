@@ -1,7 +1,9 @@
 from libqtile import bar, widget
 from libqtile.config import Screen
+import subprocess
 
 def get_screens():
+    power_profile = subprocess.run(["powerprofilesctl", "get"], stdout=subprocess.PIPE)
     return [
         Screen(
             wallpaper="~/Wallpaper.png",
@@ -23,8 +25,11 @@ def get_screens():
                     widget.Sep(),
                     widget.BatteryIcon(),
                     widget.Battery(
-                        format='{percent:2.0%}',
+                        format = "{percent:2.0%}",
                         notify_below=10,
+                    ),
+                    widget.TextBox(
+                        text=f"{power_profile.stdout.decode().strip()}",
                     ),
                     widget.Sep(),
                     widget.Volume(
