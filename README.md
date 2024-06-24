@@ -7,14 +7,16 @@ These instructions assume you are using Arch Linux.
 
 Clone the repo and place it in your home directory.
 
-Install the applications that you want to use with these files.  Applications 
-covered are:
-    * Screenshot tool: Grim
-    * Shell: Fish
-    * Terminal: Kitty 
-    * Text editor: Neovim
-    * Volume control: Amixer
-    * Window manager: Qtile
+Install the following applications:
+- Screenshot tool: Grim
+- Shell: Fish
+- Terminal: Kitty 
+- Text editor: Neovim
+- Volume control: Amixer
+- Window manager: Qtile
+- Application launcher: Rofi
+- Clipboard management: wl-clipboard
+- Power management: power-profiles-daemon
 
 Install GNU Stow:
 ```fish
@@ -26,3 +28,4 @@ Run Stow on the directory:
 cd ~/dotfiles
 stow .
 ```
+Put your wallpaper picture in your home directory and name it Wallpaper.png.
