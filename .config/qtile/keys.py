@@ -3,7 +3,7 @@ from libqtile.config import Key
 from libqtile.lazy import lazy
 from constants import mod, terminal, screenshot
 
-def get_keys():
+def get_keys(groups):
     keys = [
         # Switch between windows
         Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
@@ -73,5 +73,27 @@ def get_keys():
                 desc=f"Switch to VT{vt}",
             )
         )
-
+    for i in groups:
+        keys.extend(
+            [
+                # mod + group number = switch to group
+                Key(
+                    [mod],
+                    i.name,
+                    lazy.group[i.name].toscreen(),
+                    desc="Switch to group {}".format(i.name),
+                ),
+                # mod + shift + group number = switch to & move focused window to group
+                Key(
+                    [mod, "shift"],
+                    i.name,
+                    lazy.window.togroup(i.name, switch_group=True),
+                    desc="Switch to & move focused window to group {}".format(i.name),
+                ),
+                # Or, use below if you prefer not to switch to that group.
+                # # mod + shift + group number = move focused window to group
+                # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
+                #     desc="move focused window to group {}".format(i.name)),
+            ]
+        )
     return keys
