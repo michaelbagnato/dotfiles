@@ -25,16 +25,17 @@
 # SOFTWARE.
 
 from libqtile import layout
-from libqtile.config import Click, Drag, Group, Match
+from libqtile.config import Click, Drag, Match
 from libqtile.lazy import lazy
 
 # Michael's imports
 from keys import get_keys
 from layouts import get_layouts
 from screens import get_screens
+from groups import get_groups
 from constants import mod
 
-groups = [Group(i) for i in "123456789"]
+groups = get_groups()
 keys = get_keys(groups)
 layouts = get_layouts()
 
