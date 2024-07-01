@@ -1,23 +1,16 @@
-from libqtile.config import Group, Match
-from constants import terminal, browser
+from libqtile.config import Group
 
-def create_group(key, label, app):
+def create_group(key, label):
     return Group(
         key, 
         label=label, 
-        matches=[Match(wm_class=app)]
     )
 
 def get_groups():
-    groups = [
-        create_group("1", "\uf484", browser),
-        create_group("2", "\uf120", terminal),
-    ]
-    
-    group_keys = [i for i in "3456789"]
-    group_labels = ["1", "2", "3", "4", "5", "6", "7"]
+    groups = []
+    group_keys = [i for i in "123456789"]
+    group_labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     for i in range(len(group_keys)):
-        groups.append(Group(group_keys[i], label=group_labels[i]))
-
+        groups.append(create_group(group_keys[i], label=group_labels[i]))
     return groups
 

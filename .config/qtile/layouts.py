@@ -3,7 +3,8 @@ from libqtile import layout
 def get_layouts():
     return [
         layout.Columns(
-            border_focus_stack=["#d75f5f", "#8f3d3d"], 
+            border_focus='#d30cb8',
+            border_on_single='#d30cb8',
             border_width=2, 
             margin=5,
             margin_on_single=10

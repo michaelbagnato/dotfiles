@@ -41,7 +41,8 @@ def get_screens():
                     widget.StatusNotifier()
                 ],
                 32,
-                background="#570296",
+                #background="#570296",
+                background="#3c345c",
                 margin=[10, 5, 5, 5],
             ),
         ),
