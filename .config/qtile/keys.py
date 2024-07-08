@@ -1,7 +1,7 @@
 from libqtile import qtile
 from libqtile.config import Key
 from libqtile.lazy import lazy
-from constants import mod, terminal, screenshot
+from constants import mod, terminal, screenshot, screenlock
 
 def get_keys(groups):
     keys = [
@@ -58,7 +58,11 @@ def get_keys(groups):
         Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pipewire set Master 5%+"), desc="Raise volume"),
         Key([], "XF86AudioMute", lazy.spawn("amixer -D pipewire set Master 1+ toggle"), desc="Mute"),
 
-        Key([], "Print", lazy.spawn(screenshot, "Take a screenshot"))
+        # Screenshot
+        Key([], "Print", lazy.spawn(screenshot, "Take a screenshot")),
+
+        # Screen lock
+        Key([mod], "q", lazy.spawn(screenlock, "Lock the screen"))
     ]
 
     # Add key bindings to switch VTs in Wayland.

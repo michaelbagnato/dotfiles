@@ -17,6 +17,7 @@ Install the following applications:
 - Application launcher: Rofi
 - Clipboard management: wl-clipboard
 - Power management: power-profiles-daemon
+- Screen locker: Swaylock
 
 Install GNU Stow:
 ```fish
