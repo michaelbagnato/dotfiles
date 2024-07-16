@@ -50,6 +50,13 @@ local pluginDetails = {
       config = function()
          require("nvim-tree").setup({})
       end
+   },
+
+   -- Neogit: Git integration
+   {
+     "NeogitOrg/neogit",
+     dependencies = { "nvim-lua/plenary.nvim" },
+     config = true
    }
 }
 require("lazy").setup(pluginDetails)
