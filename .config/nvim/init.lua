@@ -18,5 +18,4 @@ vim.opt.expandtab = true
 vim.opt.shada = nil
 
 -- Colour scheme
-vim.opt.termguicolors = true
 vim.cmd("colorscheme dracula")
