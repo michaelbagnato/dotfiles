@@ -1,7 +1,7 @@
 from libqtile import qtile
 from libqtile.config import Key
 from libqtile.lazy import lazy
-from constants import mod, terminal, screenshot, screenlock
+from constants import mod, terminal, screenshot, screenlock, runner, switcher
 
 def get_keys(groups):
     keys = [
@@ -51,7 +51,7 @@ def get_keys(groups):
         Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
         Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
         Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-        Key([mod], "r", lazy.spawn("rofi -icon-theme candy-icons -show-icons -show run"), desc="Run a command using Rofi"),
+        Key([mod], "r", lazy.spawn(runner), desc="Run a command using Rofi"),
 
         # Volume control
         Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pipewire set Master 5%-"), desc="Lower volume"),
@@ -62,7 +62,10 @@ def get_keys(groups):
         Key([], "Print", lazy.spawn(screenshot, "Take a screenshot")),
 
         # Screen lock
-        Key([mod], "q", lazy.spawn(screenlock, "Lock the screen"))
+        Key([mod], "q", lazy.spawn(screenlock, "Lock the screen")),
+
+        # Window switcher
+        Key(["mod1"], "Tab", lazy.spawn(switcher), desc="Switch windows")
     ]
 
     # Add key bindings to switch VTs in Wayland.
