@@ -38,7 +38,7 @@ def get_screens():
                         mute_format='🔇'
                     ),
                     widget.Sep(),
-                    widget.Systray()
+                    widget.StatusNotifier()
                 ],
                 32,
                 #background="#570296",
