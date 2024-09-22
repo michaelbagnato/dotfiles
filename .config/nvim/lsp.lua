@@ -1,5 +1,5 @@
 -- Setting up LSP configs with default keymaps
-local lsp_zero = require("lsp-zero").preset({})
+local lsp_zero = require("lsp-zero")
 lsp_zero.on_attach = function(client, bufnr)
    lsp_zero.default_keymaps(client, bufnr)
 end
