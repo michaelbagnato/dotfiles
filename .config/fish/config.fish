@@ -8,3 +8,5 @@ fish_config theme choose "Dracula"
 alias upgrade="yay -Syu"
 alias %="fg"
 alias uefi-update="fwupdmgr refresh --force && fwupdmgr update"
+alias connect-wifi="nmcli device wifi connect"
+
