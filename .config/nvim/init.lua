@@ -17,5 +17,3 @@ vim.opt.expandtab = true
 -- Clear registers on load
 vim.opt.shada = nil
 
--- Colour scheme
-vim.cmd("colorscheme dracula")

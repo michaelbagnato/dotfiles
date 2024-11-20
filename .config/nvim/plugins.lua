@@ -15,50 +15,41 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 local pluginDetails = {
-   -- GitHub Copilot
-   "github/copilot.vim",
-
-   -- Dracula colour scheme
-   { "dracula/vim", name = "dracula" },
-
    -- LSP Zero: LSP config plugin
    "VonHeikemen/lsp-zero.nvim",
-
-   -- Mason: LSP installer
-   "williamboman/mason.nvim",
-   "williamboman/mason-lspconfig.nvim",
 
    -- LSP-Config: LSP config settings
    "neovim/nvim-lspconfig",
 
    -- Nvim-cmp: Code completion
-   "hrsh7th/nvim-cmp",
    "hrsh7th/cmp-nvim-lsp",
    "L3MON4D3/LuaSnip",
-
-   -- Telescope: File search tool
-   {
-	"nvim-telescope/telescope.nvim",
-        branch = "0.1.x",
-        dependencies = { "nvim-lua/plenary.nvim" }
-   },
-
-   -- nvim-tree: File explorer
-   {
-      "nvim-tree/nvim-tree.lua",
-      dependencies = { "nvim-tree/nvim-web-devicons" },
-      config = function()
-         require("nvim-tree").setup({
-            view = { adaptive_size = true },
-         })
-      end
-   },
-
-   -- Neogit: Git integration
-   {
-     "NeogitOrg/neogit",
-     dependencies = { "nvim-lua/plenary.nvim" },
-     config = true
-   }
 }
+
+local function add_plugin(plugin)
+   table.insert(pluginDetails, require("plugins." .. plugin))
+end
+
+-- GitHub Copilot
+add_plugin("copilot")
+
+-- Dracula colour scheme
+add_plugin("dracula")
+
+-- Mason: Auto-install LSP servers
+add_plugin("mason")
+add_plugin("mason-lspconfig")
+
+-- Nvim-cmp: Code completion
+add_plugin("nvim-cmp")
+
+-- Telescope: File search tool
+add_plugin("telescope")
+
+-- Nvim-tree: File explorer
+add_plugin("nvim-tree")
+
+-- Neofgit: Git integration
+add_plugin("neogit")
+
 require("lazy").setup(pluginDetails)
