@@ -6,9 +6,14 @@ end
 lsp_zero.setup()
 
 -- Automatic installation of LSPs
+local lsps = {
+   "lua_ls",
+   "ts_ls"
+}
+
 require("mason").setup({})
 require("mason-lspconfig").setup({
-   ensure_installed = { "lua_ls", "ts_ls" },
+  ensure_installed = lsps,
   handlers = {
       lsp_zero.default_setup,
   }
