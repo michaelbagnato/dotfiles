@@ -1,0 +1,110 @@
+/* Synthwave Theme for Waybar */
+* {
+    font-family: "Monaco", "Roboto", "Arial", sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+    color: #e4f9ff;
+    border-bottom: 3px solid #ff007c;
+    box-shadow: 0 0 20px #ff007c;
+    transition: background-color 0.5s;
+}
+
+button {
+    box-shadow: inset 0 -3px #ff007c;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #ff007c;
+    color: #0f0c29;
+    box-shadow: inset 0 -3px #0f0c29;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: #e4f9ff;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 0, 124, 0.3);
+}
+
+#workspaces button.focused {
+    background-color: #ff007c;
+    box-shadow: 0 0 10px #ff007c;
+    color: #0f0c29;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#pulseaudio {
+    padding: 0 12px;
+    color: #e4f9ff;
+    background-color: #1b1b2f;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+#clock {
+    background-color: #1f4068;
+}
+
+#battery {
+    background-color: #162447;
+}
+
+#battery.charging {
+    background-color: #1faa59;
+}
+
+#battery.critical {
+    background-color: #e43f5a;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        background-color: #e43f5a;
+    }
+    to {
+        background-color: #6a0572;
+    }
+}
+
+#tray {
+    background-color: #162447;
+}
+
+#mode {
+    background-color: #53354a;
+    box-shadow: 0 0 10px #ff007c;
+}
+
+#temperature {
+    background-color: #d72638;
+    color: #fff;
+}
+
+#workspaces {
+    margin: 0 6px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
