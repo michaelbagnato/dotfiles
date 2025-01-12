@@ -13,7 +13,7 @@ Install the following applications:
 - Terminal: Kitty 
 - Text editor: Neovim
 - Volume control: Amixer
-- Window manager: Qtile
+- Window manager: Qtile or Hyprland (I have configs for both)
 - Application launcher: Rofi
 - Clipboard management: wl-clipboard
 - Power management: power-profiles-daemon
