@@ -54,6 +54,7 @@ button:hover {
     background-color: #1b1b2f;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin-bottom: 3px;
 }
 
 #clock {
