@@ -49,6 +49,7 @@ button:hover {
 #temperature,
 #network,
 #power-profiles-daemon,
+#tray,
 #pulseaudio {
     padding: 0 12px;
     color: #e4f9ff;
