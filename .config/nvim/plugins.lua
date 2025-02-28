@@ -50,4 +50,6 @@ add_plugin("nvim-tree")
 -- Neofgit: Git integration
 add_plugin("neogit")
 
+add_plugin("nvim-treesitter")
+
 require("lazy").setup(pluginDetails)
