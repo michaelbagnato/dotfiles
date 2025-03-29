@@ -26,19 +26,6 @@ add_plugin("copilot")
 -- Dracula colour scheme
 add_plugin("dracula")
 
--- LSP Zero: LSP config plugin
-add_plugin("lsp-zero")
-
--- LSP-Config: LSP config settings
-add_plugin("lsp-config")
-
--- Mason: Auto-install LSP servers
-add_plugin("mason")
-add_plugin("mason-lspconfig")
-
--- Nvim-cmp: Code completion
-add_plugin("nvim-cmp")
-add_plugin("cmp-nvim-lsp")
 add_plugin("luasnip")
 
 -- Telescope: File search tool

@@ -1,28 +1,13 @@
--- Setting up LSP configs with default keymaps
-local lsp_zero = require("lsp-zero")
-lsp_zero.on_attach = function(client, bufnr)
-   lsp_zero.default_keymaps(client, bufnr)
-end
-lsp_zero.setup()
-
--- Automatic installation of LSPs
-local lsps = {
-   "lua_ls",
-   "ts_ls"
+vim.lsp.config.lua_ls = {
+   cmd = { "lua-language-server" },
+   root_markers = { ".git", "lua" },
+   filetypes = { "lua" },
 }
 
-require("mason").setup({})
-require("mason-lspconfig").setup({
-  ensure_installed = lsps,
-  handlers = {
-      lsp_zero.default_setup,
-  }
-})
+vim.lsp.config.ts_ls = {
+   cmd = { "typescript-language-server", "--stdio" },
+   root_markers = { ".git", "tsconfig.json" },
+   filetypes = { "typescript", "javascript" },
+}
 
--- Setting up autocompletion
-local cmp = require("cmp")
-cmp.setup({
-   mapping = {
-      ['<CR>'] = cmp.mapping.confirm({ select = false }),
-   },
-})
+vim.lsp.enable({"lua_ls", "ts_ls"})
