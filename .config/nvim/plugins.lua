@@ -26,8 +26,6 @@ add_plugin("copilot")
 -- Dracula colour scheme
 add_plugin("dracula")
 
-add_plugin("luasnip")
-
 -- Telescope: File search tool
 add_plugin("telescope")
 
