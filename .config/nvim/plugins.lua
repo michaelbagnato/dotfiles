@@ -32,7 +32,7 @@ add_plugin("telescope")
 -- Nvim-tree: File explorer
 add_plugin("nvim-tree")
 
--- Neofgit: Git integration
+-- Neogit: Git integration
 add_plugin("neogit")
 
 add_plugin("nvim-treesitter")
