@@ -7,3 +7,8 @@ keybind('<C-E>', '<cmd>NvimTreeToggle<CR>')
 
 -- Open telescope for file search
 keybind('<C-F>', '<cmd>Telescope find_files<CR>')
+
+-- Show LSP errors in a popup
+keybind('<C-W>', function()
+   vim.diagnostic.open_float(nil, { focusable = false })
+end)
