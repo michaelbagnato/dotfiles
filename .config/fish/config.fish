@@ -10,3 +10,5 @@ alias %="fg"
 alias uefi-update="fwupdmgr refresh --force && fwupdmgr update"
 alias connect-wifi="nmcli device wifi connect"
 alias reset-waybar="killall -SIGUSR2 waybar"
+
+starship init fish | source
