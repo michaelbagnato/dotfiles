@@ -21,7 +21,7 @@ set $menu rofi -icon-theme candy-icons -show-icons -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/michael/Wallpaper.jpg fill
 #
 # Example configuration:
 #
@@ -228,5 +228,7 @@ bindsym $mod+r mode "resize"
 #        inactive_workspace #32323200 #32323200 #5c5c5c
 #    }
 #}
-exec waybar
+
+include ~/.config/sway/autostart.conf
+
 include /etc/sway/config.d/*
