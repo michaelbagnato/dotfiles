@@ -11,6 +11,9 @@
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
+default_border pixel 2
+gaps inner 5
+gaps outer 5
 
 include ~/.config/sway/variables.conf
 include ~/.config/sway/keybindings.conf
