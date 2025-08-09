@@ -20,9 +20,6 @@ local function add_plugin(plugin)
    table.insert(pluginDetails, require("plugins." .. plugin))
 end
 
--- GitHub Copilot
-add_plugin("copilot")
-
 -- Dracula colour scheme
 add_plugin("dracula")
 
