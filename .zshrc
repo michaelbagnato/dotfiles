@@ -6,3 +6,6 @@ setopt AUTO_CD
 
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/autostart.zsh
+source ~/.config/zsh/functions.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
