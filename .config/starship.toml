@@ -3,3 +3,5 @@
 [[battery.display]]
 threshold = 80
 
+[time]
+disabled = false
