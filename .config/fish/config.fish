@@ -11,4 +11,6 @@ alias uefi-update="fwupdmgr refresh --force && fwupdmgr update"
 alias connect-wifi="nmcli device wifi connect"
 alias reset-waybar="killall -SIGUSR2 waybar"
 
+# Autostart
 starship init fish | source
+fzf --fish | source

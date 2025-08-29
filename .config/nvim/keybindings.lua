@@ -5,8 +5,8 @@ end
 -- Toggle File Explorer
 keybind('<C-E>', '<cmd>NvimTreeToggle<CR>')
 
--- Open telescope for file search
-keybind('<C-F>', '<cmd>Telescope find_files<CR>')
+-- Fzf file search
+keybind('<C-P>', function() require('fzf-lua').files() end)
 
 -- Show LSP error currently under cursor
 keybind('<C-M>', function()

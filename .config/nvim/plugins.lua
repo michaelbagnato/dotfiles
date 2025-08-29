@@ -23,14 +23,14 @@ end
 -- Dracula colour scheme
 add_plugin("dracula")
 
--- Telescope: File search tool
-add_plugin("telescope")
-
 -- Nvim-tree: File explorer
 add_plugin("nvim-tree")
 
 -- Neogit: Git integration
 add_plugin("neogit")
+
+-- Fzf: File searching
+add_plugin("fzf")
 
 add_plugin("nvim-treesitter")
 
