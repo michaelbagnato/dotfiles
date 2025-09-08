@@ -12,3 +12,6 @@ keybind('<C-P>', function() require('fzf-lua').files() end)
 keybind('<C-M>', function()
    vim.diagnostic.open_float(nil, { focusable = false })
 end)
+
+-- Open a terminal
+keybind('<C-`>', '<cmd>tabe term://fish<CR>')

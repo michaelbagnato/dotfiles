@@ -9,7 +9,7 @@ return {
    config = function()
       local configs = require("nvim-treesitter.configs")
       configs.setup({
-         ensure_installed = { "hyprlang", "lua", "typescript", "go" },
+         ensure_installed = { "hyprlang", "lua", "typescript", "go", "dart" },
          highlight = { enable = true },
          indent = { enable = true },
       })
