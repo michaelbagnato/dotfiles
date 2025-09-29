@@ -19,3 +19,4 @@ vim.opt.expandtab = true
 -- Clear registers on load
 vim.opt.shada = nil
 
+vim.cmd.colorscheme 'fluoromachine'

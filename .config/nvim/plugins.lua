@@ -23,6 +23,9 @@ end
 -- Dracula colour scheme
 add_plugin("dracula")
 
+-- Fluoromachine colour scheme
+add_plugin("fluoromachine")
+
 -- Nvim-tree: File explorer
 add_plugin("nvim-tree")
 
