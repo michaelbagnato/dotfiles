@@ -6,7 +6,7 @@ def get_screens():
     power_profile = subprocess.run(["powerprofilesctl", "get"], stdout=subprocess.PIPE)
     return [
         Screen(
-            wallpaper="~/Wallpaper.png",
+            wallpaper="~/Pictures/Wallpaper.jpg",
             wallpaper_mode="stretch",
             top=bar.Bar(
                 [
@@ -46,7 +46,7 @@ def get_screens():
             ),
         ),
         Screen(
-            wallpaper="~/Wallpaper.png",
+            wallpaper="~/Pictures/Wallpaper.jpg",
             wallpaper_mode="stretch",
             top=bar.Bar(
                 [
@@ -78,7 +78,7 @@ def get_screens():
                         mute_format='🔇'
                     ),
                     widget.Sep(),
-                    widget.Systray()
+                    widget.StatusNotifier()
                 ],
                 32,
                 background="#3c345c",
