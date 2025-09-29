@@ -1,4 +1,4 @@
-command = zsh
+command = fish
 
 font-size = 13
 font-family-bold = Bold
