@@ -2,3 +2,7 @@ command = fish
 
 font-size = 13
 font-family-bold = Bold
+
+maximize = true
+
+background-opacity = 0.75
