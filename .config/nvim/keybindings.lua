@@ -14,4 +14,6 @@ keybind('<C-M>', function()
 end)
 
 -- Open a terminal
-keybind('<C-`>', '<cmd>tabe term://fish<CR>')
+keybind('<C-`>', function()
+   vim.cmd.tabnew("term://fish")
+end)
