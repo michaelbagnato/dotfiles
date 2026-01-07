@@ -1,6 +1,6 @@
 return {
    cmd = { "pyright-langserver", "--stdio" },
-   root_markers = { "requirements.txt" },
+   root_markers = { "requirements.txt", "pyproject.toml" },
    filetypes = { "python" },
    single_file_support = true,
    settings = {
