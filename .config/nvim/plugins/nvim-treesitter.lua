@@ -1,7 +1,3 @@
-vim.filetype.add({
-   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
-})
-
 return {
    "nvim-treesitter/nvim-treesitter",
    build = ":TSUpdate",
@@ -9,7 +5,7 @@ return {
    config = function()
       local configs = require("nvim-treesitter.configs")
       configs.setup({
-         ensure_installed = { "hyprlang", "lua", "typescript", "go", "dart" },
+         ensure_installed = {"lua", "typescript", "go", "dart", "python" },
          highlight = { enable = true },
          indent = { enable = true },
       })
