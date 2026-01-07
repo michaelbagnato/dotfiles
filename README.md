@@ -10,10 +10,10 @@ Clone the repo and place it in your home directory.
 Install the following applications:
 - Screenshot tool: Grim
 - Shell: Fish
-- Terminal: Kitty 
+- Terminal: Ghostty
 - Text editor: Neovim
 - Volume control: Amixer
-- Window manager: Qtile or Hyprland (I have configs for both)
+- Window manager: Hyprland
 - Application launcher: Rofi
 - Clipboard management: wl-clipboard
 - Power management: power-profiles-daemon
