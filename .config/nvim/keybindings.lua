@@ -3,7 +3,9 @@ local function keybind(shortcut, cmd)
 end
 
 -- Toggle File Explorer
-keybind('<C-E>', '<cmd>NvimTreeToggle<CR>')
+keybind('<C-E>', function()
+   require("nvim-tree.api").tree.toggle()
+end)
 
 -- Fzf file search
 keybind('<C-P>', function() require('fzf-lua').files() end)
