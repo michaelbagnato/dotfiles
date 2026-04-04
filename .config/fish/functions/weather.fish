@@ -1,8 +1,10 @@
-# Get the weather for a given city
-function weather
-   if test (count $argv) -ne 1 
-      echo "Usage: weather [city]"
-   else
-    curl wttr.in/$argv
-   end
+function weather 
+    set -l weather_client http --body
+    
+    if test (count $argv) -ne 1
+        echo "Usage: weather [city]"
+        return 1
+    end
+
+    $weather_client wttr.in/$argv[1]
 end
