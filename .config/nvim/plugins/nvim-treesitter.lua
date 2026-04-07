@@ -1,4 +1,4 @@
-return {
+--[[return {
    "nvim-treesitter/nvim-treesitter",
    build = ":TSUpdate",
 
@@ -10,4 +10,4 @@ return {
          indent = { enable = true },
       })
    end,
-}
+}]]

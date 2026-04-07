@@ -13,10 +13,9 @@ vim.opt.number = true
 -- Tab width of 3
 vim.opt.tabstop = 3
 vim.opt.softtabstop = 3
-vim.opt.shiftwidth = 3
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 -- Clear registers on load
 vim.opt.shada = nil
 
-vim.cmd.colorscheme 'dracula'
