@@ -4,4 +4,4 @@ Start LSPs
 has been created in the lsp folder)
 ]]
 vim.lsp.enable({"lua_ls", "ts_ls", "gopls", "dartls", "pyright"})
-
+vim.lsp.inlay_hint.enable(true)

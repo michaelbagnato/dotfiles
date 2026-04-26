@@ -4,9 +4,14 @@ return {
    filetypes = { "lua" },
    settings = {
       Lua = {
-         diagnostics = {
+          diagnostics = {
             globals = { "vim" }
-         }
+          },
+          analysis = {
+            autoSearchPaths = true,
+            useLibraryCodeForTypes = true,
+            diagnosticMode = 'openFilesOnly',
+          },
       }
    },
     on_attach = function(client, buffnr)

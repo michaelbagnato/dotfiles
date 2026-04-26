@@ -1,11 +1,6 @@
-package.path = os.getenv("HOME") .. "/.config/nvim/?.lua;" .. package.path
 require("keybindings")
-require("plugins")
 require("lsp")
-
--- Disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+require("netrw")
 
 -- Show line numbers
 vim.opt.number = true
@@ -17,5 +12,10 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 -- Clear registers on load
-vim.opt.shada = nil
+vim.opt.shada = ""
 
+vim.pack.add({
+  { src = "https://github.com/dracula/vim.git", name = "dracula-theme" }
+})
+
+vim.cmd.colorscheme "dracula"
